@@ -14,14 +14,6 @@ interface AppointmentsState {
     viewPreference?: 'calendar' | 'schedule';
 }
 
-interface UpdateAppointmentPayload {
-    id: number;
-    startDate: number;
-    endDate: number;
-    technicians: Technician[];
-}
-
-
 export const calendarSlice = createSlice({
     name: 'appointments',
     initialState: {
