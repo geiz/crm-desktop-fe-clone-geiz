@@ -2,10 +2,20 @@
     position: relative;
     height: 100%;
     width: 100%;
-    background: var(--color-white);
-    overflow: auto;
+    background: var(--color-grey-100);
+    display: flex;
+    flex-direction: column;
 }
 
+/* Toolbar Styles */
+.scheduleContent {
+    flex: 1;
+    background: var(--color-white);
+    overflow: auto;
+    position: relative;
+}
+
+/* Header */
 .header {
     display: flex;
     position: sticky;
@@ -13,40 +23,59 @@
     z-index: 100;
     background: var(--color-white);
     border-bottom: 1px solid var(--color-grey-200);
-    min-height: 64px;
+    height: 40px;
 }
 
 .timeHeader {
     width: 62px;
     min-width: 62px;
-    padding: 4px 0;
     display: flex;
     align-items: center;
     justify-content: center;
     background: var(--color-white);
     border-right: 1px solid var(--color-grey-200);
+    padding: 2px 0;
 }
 
-.timezone {
-    font-size: 1.2rem;
-    color: var(--color-grey-700);
+.timezoneLabel {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0;
+}
+
+.timezoneAbbr {
+    font-size: 1rem;
     font-weight: 500;
+    color: var(--color-grey-700);
+    line-height: 1.2;
+}
+
+.timezoneOffset {
+    font-size: 1rem;
+    color: var(--color-grey-700);
+    line-height: 1.2;
 }
 
 .technicianHeader {
     flex: 1;
     min-width: 140px;
-    padding: 8px;
-    background: var(--color-grey-50);
+    max-width: 140px;
+    padding: 4px 8px;
+    background: var(--color-grey-100);
     border-right: 1px solid var(--color-grey-200);
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .technicianInfo {
     display: flex;
     align-items: center;
-    gap: 8px;
+    justify-content: center;
 }
 
+/* Not used atm */
 .technicianAvatar {
     width: 32px;
     height: 32px;
@@ -60,16 +89,23 @@
 }
 
 .technicianName {
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     font-weight: 500;
     color: var(--color-grey-900);
+    text-align: center;
+    max-width: 130px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
 }
 
+/* Schedule Grid */
 .scheduleGrid {
     display: flex;
     position: relative;
-    min-height: calc(14 * 64px); /* 14 hours * 64px per hour */
+    min-height: calc(14 * 45px);
 }
+
 
 .timeColumn {
     width: 62px;
@@ -79,38 +115,61 @@
 }
 
 .timeSlot {
-    height: 64px;
-    padding: 4px 0;
+    height: 45px;
+    padding: 1px 0;
     display: flex;
-    align-items: flex-end;
-    justify-content: center;
-    border-bottom: 1px solid var(--color-grey-100);
+    align-items: center;
+    justify-content: flex-start;
+    padding-left: 6px;
+    border-bottom: 1px solid var(--color-grey-200);
+    position: relative;
 }
 
+
 .timeLabel {
-    font-size: 1.2rem;
+    font-size: 1rem;
     color: var(--color-grey-700);
     font-weight: 500;
+    line-height: 1;
 }
+
 
 .technicianColumn {
     flex: 1;
-    min-width: 140px;
+    min-width: 100px;
+    max-width: 100px;
     position: relative;
     border-right: 1px solid var(--color-grey-200);
+    background: var(--color-white);
 }
 
 .scheduleCell {
-    height: 64px;
-    border-bottom: 1px solid var(--color-grey-100);
+    height: 45px;
+    border-bottom: 1px solid var(--color-grey-200);
     cursor: pointer;
     transition: background-color 0.2s ease;
+    position: relative;
 }
 
-.scheduleCell:hover {
-    background: var(--color-grey-50);
+.scheduleGrid {
+    display: flex;
+    position: relative;
+    min-height: calc(24 * 45px);
 }
 
+/* Half hour line */
+.halfHourLine {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: var(--color-grey-100);
+    opacity: 0.5;
+}
+
+
+/* Events Container */
 .eventsContainer {
     position: absolute;
     top: 0;
@@ -120,55 +179,32 @@
     pointer-events: none;
 }
 
+/* Event Styles */
 .event {
     position: absolute;
-    border-radius: 8px;
-    padding: 8px;
+    border-radius: 4px;
+    padding: 2px 4px;
     cursor: pointer;
     pointer-events: auto;
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
-    border: 2px solid;
+    transition: all 0.2s ease;
+    border: 1px solid;
     overflow: hidden;
+    min-height: 18px;
 }
 
 .event:hover {
-    transform: scale(1.02);
+    transform: translateX(-2px);
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
     z-index: 10;
 }
 
-.eventContent {
-    color: var(--color-white);
-    font-size: 1.1rem;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    gap: 2px;
+/* Event status variations */
+.scheduledEvent {
+    background-color: var(--color-white) !important;
 }
 
-.eventHeader {
-    display: flex;
-    align-items: center;
-    gap: 4px;
-    font-weight: 500;
-}
-
-.eventTitle {
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-}
-
-.eventTime {
-    font-size: 1rem;
-    opacity: 0.9;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-}
-
-.dispatchedIcon {
-    font-size: 1.2rem;
+.completedEvent {
+    opacity: 0.7;
 }
 
 .dispatched {
@@ -177,22 +213,72 @@
         transparent,
         transparent 10px,
         rgba(255, 255, 255, 0.1) 10px,
-        rgba(255, 255, 255, 0.1) 20px
+        rgba(255, 255, 255, 0.1) 45px
     );
 }
 
-.additionalTechs {
-    font-size: 0.9rem;
-    opacity: 0.8;
-    font-style: italic;
+.inProgress {
+    box-shadow: inset 0 0 0 2px rgba(255, 255, 255, 0.3);
 }
 
+.onHold {
+    background-image: linear-gradient(
+        135deg,
+        rgba(0, 0, 0, 0.1) 25%,
+        transparent 25%,
+        transparent 50%,
+        rgba(0, 0, 0, 0.1) 50%,
+        rgba(0, 0, 0, 0.1) 75%,
+        transparent 75%,
+        transparent
+    );
+    background-size: 10px 10px;
+}
+
+/* Event Content */
+.eventContent {
+    color: inherit;
+    font-size: 1rem;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    justify-content: center;
+}
+
+.eventTitle {
+    font-weight: 500;
+    font-size: 1rem;
+    line-height: 1.2;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: flex;
+    align-items: center;
+    gap: 2px;
+}
+
+.dispatchIcon {
+    font-size: 1rem;
+    flex-shrink: 0;
+}
+
+.eventTime {
+    font-size: 0.9rem;
+    opacity: 0.9;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    line-height: 1;
+}
+
+/* Current Time Indicator */
 .currentTimeIndicator {
     position: absolute;
-    left: 62px;
+    left: 0;
     right: 0;
     height: 2px;
-    background: var(--color-red-500);
+    background: var(--color-red-400);
     z-index: 50;
     pointer-events: none;
 }
@@ -200,68 +286,95 @@
 .currentTimeIndicator::before {
     content: '';
     position: absolute;
-    left: -62px;
+    left: -6px;
     top: -4px;
     width: 10px;
     height: 10px;
-    background: var(--color-red-500);
+    background: var(--color-red-400);
     border-radius: 50%;
 }
 
-/* Handle overlapping events */
-.event.overlapping {
-    width: calc(50% - 6px);
+/* Create Job Button Popup */
+.createJobPopup {
+    padding: 16px;
+    min-width: 150px;
 }
 
-.event.overlapping:nth-child(even) {
-    left: 50%;
-}
-
-/* All day events section */
-.allDayRow {
+.createJobButton {
     display: flex;
-    min-height: 32px;
-    background: var(--color-grey-50);
-    border-bottom: 2px solid var(--color-grey-200);
-}
-
-.allDayLabel {
-    width: 62px;
-    min-width: 62px;
-    padding: 8px 4px;
-    font-size: 1.1rem;
-    color: var(--color-grey-700);
-    font-weight: 500;
-    text-align: center;
-    border-right: 1px solid var(--color-grey-200);
-}
-
-.allDayEvents {
-    flex: 1;
-    display: flex;
-    padding: 4px;
-    gap: 4px;
-}
-
-.allDayEvent {
-    padding: 4px 8px;
-    border-radius: 4px;
-    font-size: 1.1rem;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 16px;
+    background: var(--color-blue-400);
     color: var(--color-white);
-    white-space: nowrap;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.3rem;
+    font-weight: 500;
     cursor: pointer;
+    transition: all 0.2s ease;
+    white-space: nowrap;
+}
+
+.createJobButton:hover {
+    background: var(--color-blue-500);
+    transform: translateY(-1px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.createJobButton i {
+    font-size: 1.4rem;
+}
+
+/* Scrollbar Styles */
+.scheduleContent::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+
+.scheduleContent::-webkit-scrollbar-track {
+    background: var(--color-grey-100);
+}
+
+.scheduleContent::-webkit-scrollbar-thumb {
+    background: var(--color-grey-300);
+    border-radius: 4px;
+}
+
+.scheduleContent::-webkit-scrollbar-thumb:hover {
+    background: var(--color-grey-400);
 }
 
 /* Responsive adjustments */
+@media (max-width: 1400px) {
+    .technicianColumn,
+    .technicianHeader {
+        min-width: 130px;
+        max-width: 130px;
+    }
+}
+
 @media (max-width: 1200px) {
-    .technicianColumn {
-        min-width: 120px;
+    .technicianColumn,
+    .technicianHeader {
+        min-width: 145px;
+        max-width: 145px;
+    }
+    
+    .technicianName {
+        font-size: 1.1rem;
+    }
+    
+    .eventContent {
+        font-size: 1.1rem;
     }
 }
 
 @media (max-width: 768px) {
-    .technicianColumn {
+    .technicianColumn,
+    .technicianHeader {
         min-width: 100px;
+        max-width: 100px;
     }
     
     .technicianName {
@@ -270,5 +383,9 @@
     
     .eventContent {
         font-size: 1rem;
+    }
+    
+    .eventTime {
+        display: none;
     }
 }

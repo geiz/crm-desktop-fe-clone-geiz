@@ -1,4 +1,4 @@
-// src/components/BigCalendar/Components/ScheduleToolbar/ScheduleToolbar.tsx
+// src/components/ScheduleToolbar/ScheduleToolbar.tsx
 import React from 'react';
 import dayjs from 'dayjs';
 
@@ -22,43 +22,43 @@ export const ScheduleToolbar: React.FC<ScheduleToolbarProps> = ({ selectedDate, 
         onNavigate(new Date());
     };
 
+    const isToday = dayjs(selectedDate).isSame(dayjs(), 'day');
+
     return (
         <div className={styles.toolbar}>
             <div className={styles.navButtons}>
-                <button type='button' className={styles.navButton} onClick={handlePrevDay}>
-                    {'<'}
+                <button 
+                    type='button' 
+                    className={styles.navButton} 
+                    onClick={handlePrevDay}
+                    aria-label="Previous day"
+                >
+                    <i className="icon-arrow-left" />
                 </button>
-                <button type='button' className={styles.navButton} onClick={handleToday}>
+                <button 
+                    type='button' 
+                    className={`${styles.navButton} ${isToday ? styles.todayActive : ''}`}
+                    onClick={handleToday}
+                >
                     Today
                 </button>
-                <button type='button' className={styles.navButton} onClick={handleNextDay}>
-                    {'>'}
+                <button 
+                    type='button' 
+                    className={styles.navButton} 
+                    onClick={handleNextDay}
+                    aria-label="Next day"
+                >
+                    <i className="icon-arrow-right" />
                 </button>
             </div>
 
             <div className={styles.dateDisplay}>
                 <span className={styles.dayOfWeek}>
-                    {dayjs(selectedDate).format('dddd')}
+                    {dayjs(selectedDate).format('ddd,')}
                 </span>
                 <span className={styles.date}>
                     {dayjs(selectedDate).format('MMMM D, YYYY')}
                 </span>
-            </div>
-
-            <div className={styles.createJobButton}>
-                <button 
-                    type='button' 
-                    className={styles.createButton}
-                    onClick={() => {
-                        // Navigate to create job with selected date
-                        const startUtc = dayjs(selectedDate).hour(9).minute(0).second(0).unix();
-                        const endUtc = dayjs(selectedDate).hour(10).minute(0).second(0).unix();
-                        window.location.href = `/jobs/create?start=${startUtc}&end=${endUtc}`;
-                    }}
-                >
-                    <i className="icon-plus" />
-                    <span>Create a Job</span>
-                </button>
             </div>
         </div>
     );
