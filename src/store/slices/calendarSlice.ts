@@ -1,6 +1,6 @@
 import { PayloadAction, createSlice } from '@reduxjs/toolkit';
 import dayjs from 'dayjs';
-
+import { getTechniciansWithColor, convertAppointmentsToEvents } from 'utils/calendarUtils';
 import { Appointment, AppointmentFilter, Event, Technician } from 'types/appointmentTypes';
 
 interface AppointmentsState {
@@ -11,7 +11,16 @@ interface AppointmentsState {
     filter: AppointmentFilter;
     isLoading: boolean;
     error: string | null;
+    viewPreference?: 'calendar' | 'schedule';
 }
+
+interface UpdateAppointmentPayload {
+    id: number;
+    startDate: number;
+    endDate: number;
+    technicians: Technician[];
+}
+
 
 export const calendarSlice = createSlice({
     name: 'appointments',
@@ -71,18 +80,43 @@ export const calendarSlice = createSlice({
             state.isLoading = false;
             state.error = null;
         },
-        updateAppointment(state, action: PayloadAction<{ id: number; startDate: number; endDate: number }>) {
-            const { id, startDate, endDate } = action.payload;
-            const appointment = state.appointments.find(a => a.id === id);
-            if (appointment) {
-                appointment.startDate = startDate;
-                appointment.endDate = endDate;
+        updateAppointment: (state, action: PayloadAction<{
+            id: number;
+            startDate: number;
+            endDate: number;
+            technicianIds: number[];
+        }>) => {
+            const { id, startDate, endDate, technicianIds } = action.payload;
+            const appointmentIndex = state.appointments.findIndex(a => a.id === id);
+
+            if (appointmentIndex !== -1) {
+                // Update the appointment
+                const updatedAppointment = {
+                    ...state.appointments[appointmentIndex],
+                    startDate,
+                    endDate,
+                    technicians: state.technicians.filter(t => technicianIds.includes(t.id))
+                };
+
+                state.appointments[appointmentIndex] = updatedAppointment;
+
+                // Regenerate events after update
+                const techniciansWithColor = getTechniciansWithColor(state.technicians);
+                state.events = convertAppointmentsToEvents(state.appointments, techniciansWithColor);
             }
+        },
+
+        // Add view preference
+        setViewPreference: (state, action: PayloadAction<'calendar' | 'schedule'>) => {
+            state.viewPreference = action.payload;
         }
     }
 });
 
-export const { setFilter, setIsLoading, setError, setCalendarData, setSelectedDate, setEvents, updateAppointment, updateEvent } =
-    calendarSlice.actions;
+export const {
+    setFilter, setIsLoading, setError, setCalendarData, setSelectedDate, setEvents, updateEvent,
+    updateAppointment,
+    setViewPreference
+} = calendarSlice.actions;
 
 export default calendarSlice.reducer;

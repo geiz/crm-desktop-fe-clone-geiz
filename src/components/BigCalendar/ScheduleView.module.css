@@ -1,0 +1,274 @@
+.scheduleView {
+    position: relative;
+    height: 100%;
+    width: 100%;
+    background: var(--color-white);
+    overflow: auto;
+}
+
+.header {
+    display: flex;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: var(--color-white);
+    border-bottom: 1px solid var(--color-grey-200);
+    min-height: 64px;
+}
+
+.timeHeader {
+    width: 62px;
+    min-width: 62px;
+    padding: 4px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--color-white);
+    border-right: 1px solid var(--color-grey-200);
+}
+
+.timezone {
+    font-size: 1.2rem;
+    color: var(--color-grey-700);
+    font-weight: 500;
+}
+
+.technicianHeader {
+    flex: 1;
+    min-width: 140px;
+    padding: 8px;
+    background: var(--color-grey-50);
+    border-right: 1px solid var(--color-grey-200);
+}
+
+.technicianInfo {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.technicianAvatar {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--color-white);
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+.technicianName {
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: var(--color-grey-900);
+}
+
+.scheduleGrid {
+    display: flex;
+    position: relative;
+    min-height: calc(14 * 64px); /* 14 hours * 64px per hour */
+}
+
+.timeColumn {
+    width: 62px;
+    min-width: 62px;
+    background: var(--color-white);
+    border-right: 1px solid var(--color-grey-200);
+}
+
+.timeSlot {
+    height: 64px;
+    padding: 4px 0;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    border-bottom: 1px solid var(--color-grey-100);
+}
+
+.timeLabel {
+    font-size: 1.2rem;
+    color: var(--color-grey-700);
+    font-weight: 500;
+}
+
+.technicianColumn {
+    flex: 1;
+    min-width: 140px;
+    position: relative;
+    border-right: 1px solid var(--color-grey-200);
+}
+
+.scheduleCell {
+    height: 64px;
+    border-bottom: 1px solid var(--color-grey-100);
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.scheduleCell:hover {
+    background: var(--color-grey-50);
+}
+
+.eventsContainer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    pointer-events: none;
+}
+
+.event {
+    position: absolute;
+    border-radius: 8px;
+    padding: 8px;
+    cursor: pointer;
+    pointer-events: auto;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    border: 2px solid;
+    overflow: hidden;
+}
+
+.event:hover {
+    transform: scale(1.02);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    z-index: 10;
+}
+
+.eventContent {
+    color: var(--color-white);
+    font-size: 1.1rem;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.eventHeader {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    font-weight: 500;
+}
+
+.eventTitle {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.eventTime {
+    font-size: 1rem;
+    opacity: 0.9;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.dispatchedIcon {
+    font-size: 1.2rem;
+}
+
+.dispatched {
+    background-image: repeating-linear-gradient(
+        45deg,
+        transparent,
+        transparent 10px,
+        rgba(255, 255, 255, 0.1) 10px,
+        rgba(255, 255, 255, 0.1) 20px
+    );
+}
+
+.additionalTechs {
+    font-size: 0.9rem;
+    opacity: 0.8;
+    font-style: italic;
+}
+
+.currentTimeIndicator {
+    position: absolute;
+    left: 62px;
+    right: 0;
+    height: 2px;
+    background: var(--color-red-500);
+    z-index: 50;
+    pointer-events: none;
+}
+
+.currentTimeIndicator::before {
+    content: '';
+    position: absolute;
+    left: -62px;
+    top: -4px;
+    width: 10px;
+    height: 10px;
+    background: var(--color-red-500);
+    border-radius: 50%;
+}
+
+/* Handle overlapping events */
+.event.overlapping {
+    width: calc(50% - 6px);
+}
+
+.event.overlapping:nth-child(even) {
+    left: 50%;
+}
+
+/* All day events section */
+.allDayRow {
+    display: flex;
+    min-height: 32px;
+    background: var(--color-grey-50);
+    border-bottom: 2px solid var(--color-grey-200);
+}
+
+.allDayLabel {
+    width: 62px;
+    min-width: 62px;
+    padding: 8px 4px;
+    font-size: 1.1rem;
+    color: var(--color-grey-700);
+    font-weight: 500;
+    text-align: center;
+    border-right: 1px solid var(--color-grey-200);
+}
+
+.allDayEvents {
+    flex: 1;
+    display: flex;
+    padding: 4px;
+    gap: 4px;
+}
+
+.allDayEvent {
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-size: 1.1rem;
+    color: var(--color-white);
+    white-space: nowrap;
+    cursor: pointer;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1200px) {
+    .technicianColumn {
+        min-width: 120px;
+    }
+}
+
+@media (max-width: 768px) {
+    .technicianColumn {
+        min-width: 100px;
+    }
+    
+    .technicianName {
+        font-size: 1rem;
+    }
+    
+    .eventContent {
+        font-size: 1rem;
+    }
+}

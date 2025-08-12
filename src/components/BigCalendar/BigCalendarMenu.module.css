@@ -1,6 +1,6 @@
 .bigCalendarMenu {
     display: flex;
-    height: calc(100vh - 20rem);
+    height: calc(100vh - 24rem);
     width: 100%;
     flex-direction: column;
     overflow-y: auto;
@@ -14,4 +14,21 @@
 
 .checkbox {
     font-size: 1.2rem;
+}
+
+.filterSection {
+    padding: 0 1.2rem;
+}
+
+.filterTitle {
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: var(--color-grey-700);
+    margin-bottom: 0.8rem;
+}
+
+.divider {
+    border: none;
+    border-top: 1px solid var(--color-grey-200);
+    margin: 1.2rem 0;
 }

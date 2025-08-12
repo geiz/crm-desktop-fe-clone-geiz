@@ -1,0 +1,77 @@
+/* src/components/BigCalendar/Components/ScheduleToolbar/ScheduleToolbar.module.css */
+.toolbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    border-bottom: 1px solid var(--color-grey-200);
+    background: var(--color-white);
+}
+
+.navButtons {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.navButton {
+    background-color: var(--color-white);
+    border: 1px solid var(--color-grey-200);
+    border-radius: 4px;
+    padding: 0.5rem 1rem;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    color: var(--color-grey-700);
+}
+
+.navButton:hover {
+    background-color: var(--color-grey-100);
+    border-color: var(--color-grey-300);
+}
+
+.dateDisplay {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.25rem;
+}
+
+.dayOfWeek {
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: var(--color-grey-900);
+}
+
+.date {
+    font-size: 1.4rem;
+    color: var(--color-grey-600);
+}
+
+.createJobButton {
+    display: flex;
+}
+
+.createButton {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.75rem 1.5rem;
+    background: var(--color-blue-400);
+    color: var(--color-white);
+    border: none;
+    border-radius: 6px;
+    font-size: 1.3rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.createButton:hover {
+    background: var(--color-blue-500);
+    transform: translateY(-1px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.createButton i {
+    font-size: 1.4rem;
+}

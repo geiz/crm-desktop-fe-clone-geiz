@@ -1,10 +1,12 @@
 import dayjs from 'dayjs';
 import { Loader } from 'rsuite';
 
-import { useMemo } from 'react';
+import { useMemo, useState } from 'react';
 
 import { BigCalendar } from 'components/BigCalendar/BigCalendar';
 import { BigCalendarMenu } from 'components/BigCalendar/BigCalendarMenu';
+import { ScheduleView } from 'components/BigCalendar/ScheduleView';
+import { ViewToggle, ViewMode } from 'components/BigCalendar/ViewToggle';
 import { Drawer } from 'components/Drawer/Drawer';
 
 import useTimezone from 'hooks/useTimezone';
@@ -17,6 +19,7 @@ const SchedulePage = () => {
     const { filter, events, isLoading } = useAppSelector(state => state.calendar);
     const { shiftDateForBigCalendarView } = useTimezone();
     const selectedDate = dayjs.unix(filter.selectedDate).toDate();
+    const [viewMode, setViewMode] = useState<ViewMode>('calendar');
 
     const filteredCalendarEvents = useMemo(
         () =>
@@ -31,10 +34,15 @@ const SchedulePage = () => {
     return (
         <div className={styles.schedulePage}>
             <Drawer>
+                <ViewToggle currentView={viewMode} onViewChange={setViewMode} />
                 <BigCalendarMenu selectedDate={selectedDate} />
             </Drawer>
             <div className={styles.calendarContainer}>
-                <BigCalendar events={filteredCalendarEvents} selectedDate={selectedDate} />
+                {viewMode === 'calendar' ? (
+                    <BigCalendar events={filteredCalendarEvents} selectedDate={selectedDate} />
+                ) : (
+                    <ScheduleView selectedDate={selectedDate} events={filteredCalendarEvents} />
+                )}
             </div>
             {isLoading && <Loader size='lg' center />}
         </div>
