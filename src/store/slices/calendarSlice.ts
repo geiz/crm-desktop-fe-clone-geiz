@@ -90,12 +90,15 @@ export const calendarSlice = createSlice({
             const appointmentIndex = state.appointments.findIndex(a => a.id === id);
 
             if (appointmentIndex !== -1) {
-                // Update the appointment
+
                 const updatedAppointment = {
                     ...state.appointments[appointmentIndex],
                     startDate,
                     endDate,
-                    technicians: state.technicians.filter(t => technicianIds.includes(t.id))
+                    technicians: state.technicians.filter(
+                        (t): t is Technician & { id: number } =>
+                            t.id != null && technicianIds.includes(t.id)
+                    ),
                 };
 
                 state.appointments[appointmentIndex] = updatedAppointment;

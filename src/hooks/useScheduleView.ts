@@ -8,7 +8,7 @@ import { Event } from 'types/appointmentTypes';
 
 export const useScheduleView = () => {
     const dispatch = useAppDispatch();
-    const { appointments, technicians } = useAppSelector(state => state.calendar);
+    const { appointments } = useAppSelector(state => state.calendar);
 
     // Handle drag and drop of events
     const handleEventDrop = useCallback(
@@ -31,7 +31,7 @@ export const useScheduleView = () => {
                 })
             );
         },
-        [appointments, technicians, dispatch]
+        [appointments, dispatch]
     );
 
     // Calculate if events overlap

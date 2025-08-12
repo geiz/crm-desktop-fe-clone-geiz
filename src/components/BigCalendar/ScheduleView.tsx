@@ -207,8 +207,8 @@ export const ScheduleView: React.FC<ScheduleViewProps> = ({ selectedDate, events
                                             <span className={styles.eventTitle}>{event.title}</span>
                                         </div>
                                         <div className={styles.eventTime}>
-                                            {dayjs(event.start).format(TIME_FORMAT_A)} - 
-                                            {dayjs(event.end).format(TIME_FORMAT_A)}
+                                            {shiftTimeFormatted(dayjs(event.start).unix(), TIME_FORMAT_A)} - 
+                                            {shiftTimeFormatted(dayjs(event.end).unix(), TIME_FORMAT_A)}
                                         </div>
                                     </div>
                                 </div>
