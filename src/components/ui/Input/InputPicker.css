@@ -1,0 +1,180 @@
+/* self styles - start */
+.input-picker {
+    height: 3.4rem;
+    display: grid;
+    align-items: center;
+    align-content: center;
+    grid-template-columns: 1fr 15rem;
+}
+
+.input-picker__label {
+    display: flex;
+    align-items: center;
+    column-gap: 0.2rem;
+    color: var(--color-grey-900);
+}
+
+.input-picker .icon-drop-down-small {
+    font-size: 1.6rem;
+    color: var(--color-grey-600);
+}
+
+.input-picker__value {
+    padding-left: 1.2rem;
+}
+
+/* self styles - end */
+
+/* restyle component - start */
+
+.input-picker .rs-picker {
+    border: none;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.input-picker .rs-picker:hover {
+    background-color: var(--color-grey-100);
+    border-radius: 0.8rem;
+}
+
+.input-picker .rs-picker-default .rs-btn.rs-picker-toggle {
+    background-color: transparent !important;
+    border-radius: 0.8rem;
+}
+
+.input-picker .rs-picker-input .rs-picker-toggle:hover {
+    cursor: pointer;
+    background-color: var(--color-grey-100);
+}
+
+.input-picker .rs-picker-toggle-active,
+.input-picker .rs-picker.rs-picker-focused {
+    box-shadow: unset;
+    -webkit-box-shadow: unset;
+}
+
+.input-picker .rs-picker-has-value.rs-picker-cleanable .rs-picker-toggle.rs-btn {
+    padding-right: 1.2rem;
+}
+
+.input-picker .rs-picker-has-value .rs-btn .rs-picker-toggle-value,
+.input-picker .rs-picker-has-value .rs-picker-toggle .rs-picker-toggle-value,
+.input-picker .rs-picker-toggle-textbox,
+.input-picker .rs-picker-search-input {
+    color: var(--color-grey-800);
+    font-family: var(--font-main);
+    font-size: 1.4rem;
+    font-weight: 500;
+    line-height: 1.7rem;
+}
+
+.input-picker .rs-picker-toggle-textbox {
+    padding: 1rem 1.2rem;
+}
+
+.input-picker .rs-inline-edit .rs-plaintext:hover {
+    background-color: var(--color-grey-100);
+}
+
+.input-picker .rs-picker-search-input {
+    padding: 1rem 1.2rem;
+    color: var(--color-grey-800);
+}
+
+.input-picker .rs-picker-default .rs-picker-toggle.rs-btn {
+    padding: 1rem 1.2rem;
+}
+
+/* dropdown icon */
+.rs-picker-caret-icon.rs-icon,
+.rs-picker-clean.rs-btn-close {
+    display: none !important;
+}
+
+/* list styles */
+
+.rs-picker-popup .rs-picker-select-menu-item {
+    padding: 1.15rem 1.2rem;
+    color: var(--color-grey-600);
+}
+
+.rs-picker-popup .rs-picker-select-menu-item:hover,
+.rs-picker-popup .rs-picker-select-menu-item.rs-picker-select-menu-item-focus:hover {
+    color: var(--color-grey-800);
+    background-color: var(--color-grey-100);
+    border-radius: 0.8rem;
+}
+
+.rs-picker-popup .rs-picker-select-menu-item:focus,
+.rs-picker-popup .rs-picker-select-menu-item.rs-picker-select-menu-item-focus {
+    color: var(--color-grey-600);
+    background-color: transparent;
+    border-radius: 0.8rem;
+}
+
+.rs-picker-popup .rs-picker-select-menu-item.rs-picker-select-menu-item-active {
+    color: var(--color-grey-800);
+    font-weight: 500;
+    background-color: var(--color-grey-100);
+    border-radius: 0.8rem;
+}
+
+.rs-highlight-mark {
+    color: var(--color-grey-800);
+    font-family: var(--font-main);
+    font-size: 1.4rem;
+    font-weight: 600;
+    line-height: 1.7rem;
+    letter-spacing: -0.02rem;
+
+    background-color: unset;
+}
+
+.rs-picker-popup {
+    padding: 0.3rem !important;
+    border: 0.1rem solid var(--color-grey-200);
+    border-radius: 1rem;
+    box-shadow: var(--shadow-8);
+}
+
+/* TODO: move styles to a common file to avoid duplication. */
+.rs-picker-select-menu.rs-picker-select-menu-items::-webkit-scrollbar {
+    width: var(--scrollbar-width);
+}
+
+.rs-picker-select-menu.rs-picker-select-menu-items::-webkit-scrollbar-thumb {
+    background: var(--scrollbar-thumb-bg);
+    border-radius: var(--scrollbar-thumb-radius);
+}
+
+.rs-picker-select-menu.rs-picker-select-menu-items::-webkit-scrollbar-track {
+    background: var(--scrollbar-track-bg);
+    box-shadow: var(--scrollbar-track-shadow);
+    border-radius: var(--scrollbar-track-radius);
+    border-left: var(--scrollbar-border-left);
+    border-right: var(--scrollbar-border-right);
+}
+
+.input-picker .rs-picker-cleanable .rs-picker-textbox {
+    margin-right: 0;
+}
+
+.rs-picker-textbox {
+    min-height: 3.4rem;
+}
+
+.rs-picker-search-input,
+.rs-picker-default .rs-picker-toggle.rs-btn,
+.rs-inline-edit .rs-plaintext,
+.rs-picker-select-menu-item {
+    font-family: var(--font-main);
+    font-size: 1.4rem;
+    font-weight: 500;
+    line-height: 1.7rem;
+    letter-spacing: -0.02rem;
+}
+
+.rs-picker-none {
+    font-family: var(--font-main);
+    margin: 0 auto;
+}

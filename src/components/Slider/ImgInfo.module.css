@@ -1,0 +1,9 @@
+.container {
+    padding: 0 0.3rem;
+}
+.name {
+    color: var(--color-grey-800);
+}
+.date {
+    color: var(--color-grey-600);
+}

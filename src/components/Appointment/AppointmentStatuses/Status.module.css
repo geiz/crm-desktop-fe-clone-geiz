@@ -1,0 +1,37 @@
+.grey1000 {
+    color: var(--color-grey-1000);
+}
+
+.status {
+    border-radius: 0.4rem;
+    margin-bottom: 0.4rem;
+}
+
+.statusWithBg {
+    padding: 0.4rem 1.2rem;
+    margin-bottom: 0.8rem;
+
+}
+
+.holdColor {
+    background: var(--color-golden-100);
+}
+
+.cancelColor {
+    background: var(--color-iron-grey-100);
+}
+
+.jobStatus {
+    display: flex;
+    gap: 0.8rem;
+    margin-top: 0.2rem;
+
+    i {
+        color: var(--color-grey-500);
+        font-size: 1.6rem;
+    }
+}
+
+.popoverChildrenStyle {
+    margin-top: 0.3rem;
+}

@@ -1,0 +1,27 @@
+.form {
+    margin: 3.2rem 4rem 4rem;
+    display: flex;
+    flex-direction: column;
+    gap: 3.2rem;
+    width: 60.8rem;
+}
+
+.title {
+    color: var(--color-grey-700);
+}
+
+.actions {
+    display: flex;
+    justify-content: flex-end;
+    column-gap: 1.6rem;
+}
+
+.inputs {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2.4rem 1.6rem;
+}
+
+.fullWidth {
+    grid-column: span 2;
+}

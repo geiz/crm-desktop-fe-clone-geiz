@@ -1,0 +1,111 @@
+.fieldsWrapper {
+    padding: 0;
+    margin: 0;
+    width: fit-content;
+    display: flex;
+    gap: 2.5rem;
+    border: none;
+}
+
+.groupLabel {
+    margin-bottom: 1.6rem;
+    color: var(--color-grey-700);
+}
+
+.radioWrap {
+    line-height: 1.6rem;
+}
+
+.vertical {
+    flex-direction: column;
+}
+
+.input {
+    width: 0;
+    height: 0;
+
+    position: absolute;
+    z-index: -1;
+
+    opacity: 0;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.label {
+    display: flex;
+    align-items: center;
+    column-gap: 0.8rem;
+
+    position: relative;
+
+    color: var(--color-grey-800);
+
+    cursor: pointer;
+}
+
+.label::before {
+    content: '';
+
+    width: 1.6rem;
+    height: 1.6rem;
+
+    display: block;
+    flex-shrink: 0;
+
+    background-color: var(--color-white);
+    border-radius: 50%;
+    border: solid var(--color-grey-500);
+    border-width: 0.1rem;
+    transition:
+        background-color 0.3s,
+        border-color 0.3s;
+}
+
+.input:focus + .label::before {
+    border-color: var(--color-blue-300);
+    outline: solid var(--color-blue-200);
+    outline-width: 0.1rem;
+}
+
+.input:disabled + .label {
+    color: var(--color-grey-300);
+    cursor: not-allowed;
+    user-select: none;
+}
+
+.input:disabled + .label::before {
+    background-color: var(--color-grey-100);
+    border-color: var(--color-grey-300);
+}
+
+.input:checked + .label::after {
+    content: '';
+
+    width: 0.8rem;
+    height: 0.8rem;
+
+    position: absolute;
+    top: 50%;
+    left: 0.48rem;
+
+    background-color: var(--color-blue-300);
+    border-radius: 50%;
+    transform: translateY(-50%);
+}
+
+.input:checked:disabled + .label::after {
+    background-color: var(--color-grey-300);
+}
+
+.label:hover::before {
+    border-color: var(--color-blue-400);
+}
+
+.input:checked:hover + .label::before {
+    border-color: var(--color-blue-400);
+}
+
+.input:checked:hover + .label::after {
+    background-color: var(--color-blue-400);
+}

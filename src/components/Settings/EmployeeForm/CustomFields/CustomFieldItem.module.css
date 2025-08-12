@@ -1,0 +1,37 @@
+.wrap {
+    padding: 1.6rem;
+    display: grid;
+    grid-template-columns: auto auto 1fr;
+    gap: 0.8rem;
+    border: 0.1rem solid var(--color-grey-100);
+    border-radius: 0.8rem;
+    transition: box-shadow 0.2s ease-in;
+}
+
+.wrap:hover {
+    box-shadow: var(--shadow-8);
+}
+
+.label {
+    margin-right: 1.2rem;
+    align-self: center;
+    color: var(--color-grey-900);
+}
+
+.select {
+    width: 29.6rem;
+    margin-bottom: 0.9rem;
+}
+
+.actions {
+    margin-left: auto;
+    display: flex;
+    gap: 1.6rem;
+    align-self: start;
+}
+
+.action {
+    padding: 0.4rem;
+    font-size: 1.6rem;
+    color: var(--color-grey-600);
+}

@@ -1,0 +1,53 @@
+.cellWrapper {
+  padding-top: 0.4rem;
+  display: flex;
+  gap: 0.8rem;
+}
+
+.cell {
+  color: var(--color-grey-800);
+  text-overflow: ellipsis;
+  overflow: hidden;
+  transition: height 0.3s ease;
+}
+
+.uppercase {
+  text-transform: uppercase;
+}
+
+.lowercase {
+  text-transform: lowercase;
+}
+
+.arrow {
+  padding: 0 0.5rem;
+  margin: 0;
+
+  height: fit-content;
+
+  font-size: 1.6rem;
+  color: var(--color-grey-600);
+
+  background: transparent;
+  border: none;
+  transition: transform 0.3s ease-out;
+  cursor: pointer;
+
+  &:hover {
+    color: var(--color-grey-900);
+  }
+}
+
+.expanded+button {
+  transform: rotate(180deg) translateY(0.2rem);
+}
+
+.collapse {
+  white-space: nowrap;
+  height: 1.6rem;
+}
+
+.expanded {
+  margin-bottom: 1.2rem;
+  white-space: normal;
+}

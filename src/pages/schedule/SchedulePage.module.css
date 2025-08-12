@@ -1,0 +1,19 @@
+.schedulePage {
+    font-family: var(--font-main);
+    display: flex;
+    background-color: var(--color-white);
+    height: 87vh;
+    overflow: hidden;
+    padding: 3.4rem 1rem;
+}
+
+.drawer {
+    flex-grow: 1;
+    transition: width 0.3s ease;
+}
+
+.calendarContainer {
+    flex-grow: 1;
+    transition: margin-left 0.3s ease;
+    overflow: hidden;
+}

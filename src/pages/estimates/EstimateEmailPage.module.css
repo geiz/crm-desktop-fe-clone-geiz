@@ -1,0 +1,15 @@
+.content {
+    padding: 4.4rem 4.8rem 8rem;
+}
+
+.title {
+    color: var(--color-grey-700);
+    margin-bottom: 4rem;
+}
+
+.mainContent {
+    display: flex;
+    gap: 4rem;
+    flex-wrap: nowrap;
+    margin: 0 auto;
+}

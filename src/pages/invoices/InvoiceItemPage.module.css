@@ -1,0 +1,95 @@
+.content {
+    margin: 4rem 4.8rem;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    column-gap: 0.8rem;
+}
+
+.collectBtn {
+    margin-left: auto;
+}
+
+.contentWrapper {
+    margin-top: 3.2rem;
+    display: grid;
+    align-items: start;
+    grid-template-columns: 29.6rem 1fr;
+    gap: 1.9rem 4rem;
+}
+
+
+.leftSide {
+    display: flex;
+    flex-direction: column;
+    gap: 2.4rem;
+}
+
+.personalInfo {
+    padding: 3.2rem 2.4rem 4rem 4rem;
+}
+
+.mainContentWrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+}
+
+
+.drawerContent {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.paymentTitle {
+    padding: 3.2rem 5.6rem 2.4rem;
+}
+
+
+.label {
+    margin-right: 1.2rem;
+    color: var(--color-grey-800);
+}
+
+.value {
+    margin-right: 2.4rem;
+    position: relative;
+    color: var(--color-grey-1000);
+}
+
+.value:not(:last-child)::after {
+    content: '';
+
+    width: 0.1rem;
+    height: 1rem;
+
+    position: absolute;
+    right: -1.2rem;
+    top: 50%;
+    transform: translateY(-50%);
+
+    background-color: var(--color-grey-300);
+}
+
+.summary {
+    margin-left: 4.8rem;
+}
+
+.jobActionsDropdown {
+    display: flex;
+    column-gap: 0.6rem;
+    color: var(--color-grey-600);
+    margin-left: 0.7rem;
+}
+
+.jobActionsBtn {
+    column-gap: 0.6rem;
+    color: var(--color-grey-600);
+
+    i {
+        font-size: 1.6rem;
+    }
+}

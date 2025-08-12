@@ -1,0 +1,73 @@
+.icon {
+  color: var(--color-grey-500);
+  font-size: 1.6rem;
+}
+
+.popoverChildren {
+  display: flex;
+  gap: 0.62rem;
+}
+
+.itemsCenter {
+  align-items: center;
+}
+
+.text {
+  max-width: 15rem;
+  color: var(--color-grey-900);
+}
+
+.grey800 {
+  color: var(--color-grey-800);
+}
+
+.saveBtn {
+  width: 4.4rem;
+  height: 4.4rem;
+  margin-top: 2rem;
+  font-size: 2rem;
+  color: var(--color-grey-600);
+}
+
+.input {
+  height: 4.4rem;
+}
+
+.editBtn {
+  align-self: start;
+  padding: 0.2rem;
+  color: var(--color-grey-500);
+  font-size: 1.6rem;
+}
+
+.noNote {
+  color: var(--color-grey-600);
+  display: flex;
+  align-items: center;
+  gap: 0.38rem;
+}
+
+.ellipsis {
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+.popover {
+  padding: 1.2rem 1.6rem 3.2rem;
+}
+
+.form {
+  margin-bottom: 2rem;
+}
+
+.cell {
+  color: var(--color-grey-800);
+  text-overflow: ellipsis;
+  overflow: hidden;
+  transition: height 0.3s ease;
+}
+
+.collapse {
+  white-space: nowrap;
+  height: 1.6rem;
+}

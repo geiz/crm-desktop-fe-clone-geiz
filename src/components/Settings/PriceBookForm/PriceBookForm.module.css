@@ -1,0 +1,24 @@
+.form {
+    width: 60.8rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2.4rem;
+}
+
+.duration {
+    color: var(--color-grey-700);
+}
+
+.durationInput {
+    margin-bottom: 1.6rem;
+    width: 20rem;
+}
+
+.durationHint {
+    margin-bottom: 1.6rem;
+}
+
+.durationList {
+    padding: 0 2.6rem;
+    margin: 0;
+}

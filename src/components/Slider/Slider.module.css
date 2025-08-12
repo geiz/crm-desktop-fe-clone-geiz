@@ -1,0 +1,142 @@
+.imageSliderContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4rem;
+}
+
+.imageSliderWrap {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+}
+
+.sliderWrap {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.slider {
+    margin: 0 auto;
+
+    &.many {
+        width: auto;
+        height: 35.6rem;
+    }
+
+    &.one {
+        width: auto;
+        height: 35.6rem;
+    }
+}
+
+.slide {
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    margin: 0 auto;
+
+    img {
+        border-radius: 1rem;
+    }
+}
+
+.thumbnailList {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    width: 36rem;
+    scroll-behavior: smooth;
+    margin-bottom: 1.2rem;
+
+    .thumbItem {
+        cursor: pointer;
+        width: 8rem;
+
+        img {
+            width: 100%;
+            height: 8rem;
+            border-radius: 0.4rem;
+            object-fit: cover;
+            opacity: 0.5;
+            transform: scale(0.9);
+        }
+    }
+
+    .active {
+        img {
+            opacity: 1;
+            transform: scale(1);
+        }
+    }
+}
+
+.flexCenter {
+    justify-content: center;
+}
+
+.infoWrap {
+    display: flex;
+    justify-content: space-between;
+    gap: 0.5rem;
+    margin: 0 auto;
+
+    &.many {
+        width: 26.7rem;
+    }
+
+    &.one {
+        width: 36rem;
+    }
+}
+
+.count {
+    color: var(--color-grey-800);
+}
+
+.prev {
+    transform: rotate(90deg);
+    padding: 1rem;
+}
+
+.next {
+    transform: rotate(-90deg);
+    padding: 1rem;
+}
+
+.ellipsis {
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    width: 8rem;
+    overflow: hidden;
+}
+
+.fadeIn {
+    animation: fadeIn 0.3s ease-in-out forwards;
+}
+
+.fadeOut {
+    animation: fadeOut 0.3s ease-in-out forwards;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeOut {
+    from {
+        opacity: 1;
+    }
+
+    to {
+        opacity: 0;
+    }
+}

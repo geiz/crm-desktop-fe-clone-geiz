@@ -1,0 +1,61 @@
+.toggleLabelWrap {
+    display: inline-flex;
+    align-items: center;
+    gap: 1.2rem;
+    cursor: pointer;
+}
+
+.toggleContainer {
+    position: relative;
+    display: inline-block;
+    width: 4.4rem;
+    height: 2.4rem;
+}
+
+.toggleInput {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.toggleSlider {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: var(--color-grey-300);
+    transition: 0.3s;
+    border-radius: 2.4rem;
+}
+
+.toggleSlider:before {
+    position: absolute;
+    content: "";
+    height: 1.8rem;
+    width: 1.8rem;
+    left: 0.3rem;
+    bottom: 0.3rem;
+    background-color: white;
+    transition: 0.3s;
+    border-radius: 50%;
+}
+
+.toggleInput:checked+.toggleSlider {
+    background-color: var(--color-blue-300);
+}
+
+.toggleInput:checked+.toggleSlider:before {
+    transform: translateX(2rem);
+}
+
+.toggleInput:disabled+.toggleSlider {
+    cursor: not-allowed;
+    opacity: 0.5;
+}
+
+.labelText {
+    user-select: none;
+    color: var(--color-grey-900);
+    font-size: 1.4rem;
+}

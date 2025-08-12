@@ -1,0 +1,47 @@
+.wrap {
+    padding: 3.2rem 4rem;
+    width: 37.6rem;
+}
+
+.title {
+    margin-bottom: 0.4rem;
+    color: var(--color-grey-900);
+}
+
+.subtitle {
+    margin-bottom: 4rem;
+    color: var(--color-grey-900);
+}
+
+.radioGroup {
+    display: flex;
+    flex-direction: column;
+    gap: 1.6rem;
+}
+
+.footer {
+    margin-top: 8.8rem;
+    display: flex;
+    gap: 1.6rem;
+    justify-content: flex-end;
+}
+
+.multiselectStep .title {
+    margin-bottom: 2.4rem;
+}
+
+.multiselectStep .fieldName {
+    margin-bottom: 2.4rem;
+}
+
+.multiselectStep .footer {
+    margin-top: 3.2rem;
+}
+
+.toggleStep .title {
+    margin-bottom: 6.4rem;
+}
+
+.toggleStep .footer {
+    margin-top: 8rem;
+}

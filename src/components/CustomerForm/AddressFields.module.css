@@ -1,0 +1,68 @@
+/* parent form must be grid with 
+ grid-template-areas: (example)
+    'selectAddress selectAddress'
+    'warning warning'
+    'streetAddress city'
+    'state country'
+    'zipCode apartment'
+    'buzzer resetBtn';
+*/
+
+.selectAddress {
+  grid-area: selectAddress;
+}
+
+.warning {
+  grid-area: warning;
+}
+
+.selectAddress,
+.warning.mb,
+.streetAddress,
+.city,
+.state,
+.country,
+.zipCode,
+.apartment {
+  margin-bottom: 2.4rem;
+}
+
+.streetAddress {
+  grid-area: streetAddress;
+}
+
+.city {
+  grid-area: city;
+}
+
+.state {
+  grid-area: state;
+}
+
+.country {
+  grid-area: country;
+}
+
+.zipCode {
+  grid-area: zipCode;
+}
+
+.apartment {
+  grid-area: apartment;
+}
+
+.buzzer {
+  grid-area: buzzer;
+}
+
+.resetBtn {
+  grid-area: resetBtn;
+  width: fit-content;
+  margin-top: 2rem;
+  height: 4.5rem;
+  color: var(--color-grey-600);
+}
+
+.end {
+  justify-self: end;
+}

@@ -1,0 +1,5 @@
+.pickers {
+    gap: 1.6rem;
+    display: grid;
+    grid-template-columns: 29.6rem 14rem 14rem;
+}

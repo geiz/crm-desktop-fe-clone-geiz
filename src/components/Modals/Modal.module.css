@@ -1,0 +1,89 @@
+.overlay {
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 50;
+
+    background: rgba(0, 0, 0, 0.2);
+}
+
+.overlay-enter {
+    opacity: 0;
+}
+
+.overlay-enter-active {
+    opacity: 1;
+    transition: opacity 300ms;
+}
+
+.overlay-exit {
+    opacity: 1;
+}
+
+.overlay-exit-active {
+    opacity: 0;
+    transition: opacity 300ms;
+}
+
+.modal {
+    width: fit-content;
+
+    position: relative;
+
+    background: var(--color-grey-100);
+    border-radius: 1.6rem;
+    overflow: hidden;
+}
+
+.overlay-enter .modal {
+    opacity: 0;
+}
+
+.overlay-enter-active .modal {
+    opacity: 1;
+    transition: opacity 300ms;
+}
+
+.overlay-exit .modal {
+    opacity: 1;
+}
+
+.overlay-exit-active .modal {
+    opacity: 0;
+    transition: opacity 300ms;
+}
+
+.deleteIcon {
+    margin-bottom: 2.4rem;
+
+    width: 4rem;
+    height: 4rem;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 1.6rem;
+    color: var(--color-red-300);
+
+    background-color: var(--color-white);
+    border-radius: 50%;
+}
+
+.deleteModalTitle {
+    color: var(--color-grey-700);
+}
+
+.modalActions {
+    margin-top: 3.2rem;
+    display: flex;
+    justify-content: flex-end;
+    gap: 1.6rem;
+}

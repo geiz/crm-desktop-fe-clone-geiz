@@ -1,0 +1,76 @@
+.form {
+    margin: 3.2rem 4rem 4rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2.4rem;
+    width: 60.8rem;
+}
+
+.title {
+    color: var(--color-grey-700);
+}
+
+.actions {
+    display: flex;
+    justify-content: flex-end;
+    column-gap: 1.6rem;
+}
+
+.row {
+    width: 100%;
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 1rem;
+}
+
+.itemNameSelect {
+    width: 37.8rem;
+    flex-shrink: 0;
+}
+
+.quantityInput input,
+.priceInput input {
+    height: 4.4rem;
+}
+
+.quantityInput {
+    width: 8.0rem;
+}
+
+.partNumberInput {
+    width: 21.8rem;
+}
+
+.currency {
+    position: absolute;
+    left: 1.2rem;
+    color: var(--color-grey-800);
+}
+
+.priceInput {
+    width: 13rem;
+}
+
+.priceInput input {
+    padding-left: 2.4rem;
+    height: 4.4rem;
+}
+
+.deleteBtn {
+    padding: 1.2rem;
+    margin-left: 1.8rem;
+    margin-right: 0.2rem;
+
+    width: 4.4rem;
+
+    font-size: 2rem;
+    align-self: end;
+}
+
+.serviceSummary {
+    flex: 1;
+}
+
+.materialSummary {
+    width: 50.6rem;
+}

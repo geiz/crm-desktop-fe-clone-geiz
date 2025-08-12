@@ -1,0 +1,16 @@
+.modal {
+  position: fixed;
+  padding: 3.2rem 4rem;
+  width: 40rem;
+  min-height: 20rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+}
+
+.description {
+  color: var(--color-grey-900);
+  text-align: center;
+}

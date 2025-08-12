@@ -1,0 +1,266 @@
+.custom-datepicker {
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* Стили для иконки календаря */
+.custom-datepicker .icon-small-calendar {
+    width: 1.6rem;
+    height: 1.6rem;
+    display: inline-block;
+    font-size: 1.6rem;
+    color: var(--color-grey-600);
+}
+
+.rs-picker-toolbar {
+    padding: 2.4rem 1.6rem;
+    border-top: none;
+}
+
+.rs-picker-toolbar .rs-stack-item button {
+    padding: 0.7rem 2.6rem;
+
+    font-family: var(--font-main);
+    font-size: 1.4rem;
+    font-weight: 500;
+    line-height: 1.7rem;
+    letter-spacing: -0.02rem;
+
+    border: 0.1rem solid var(--color-grey-300);
+    border-radius: 0.8rem;
+}
+
+/* Стили для кнопки Reset  - cleanable = false*/
+/* .rs-picker-toolbar .rs-stack-item:first-child button {
+    color: var(--color-grey-700);
+    background-color: var(--color-blue-100);
+} */
+
+/* Стили для кнопки Apply - removed */
+/* .rs-picker-toolbar .rs-stack-item:nth-child(2) button {
+    background-color: var(--color-blue-300);
+} */
+
+/* Стили для кнопки Reset по ховеру - cleanable = false*/
+/* .rs-picker-toolbar .rs-stack-item:first-child button:hover {
+    text-decoration: none;
+    color: var(--color-grey-900);
+    background-color: var(--color-grey-300);
+} */
+
+/* Стили для поля ввода */
+.datepicker-wrap .rs-input {
+    padding: 1rem 0 1rem 1.2rem;
+
+    color: var(--color-grey-800);
+    font-family: var(--font-main);
+    font-size: 1.6rem !important;
+    font-weight: 400;
+    line-height: 2.2rem !important;
+    letter-spacing: -0.02rem;
+}
+
+.datepicker-wrap .rs-input::placeholder {
+    color: var(--color-grey-600);
+    opacity: 1;
+}
+
+.rs-input-group.rs-input-group-inside .rs-input-group-addon {
+    padding: 0.8rem !important;
+}
+
+.rs-input-group {
+    border: 0.1rem solid var(--color-grey-200);
+    border-radius: 0.8rem !important;
+    overflow: hidden;
+}
+
+.rs-picker-popup .rs-calendar {
+    padding: 2.4rem 0;
+    width: 23.4rem !important;
+    min-height: auto !important;
+}
+
+.rs-btn-icon.rs-btn-xs>.rs-icon {
+    font-size: 1.6rem;
+}
+
+.rs-calendar-body {
+    padding: 0 1.9rem;
+}
+
+.rs-calendar-header-title {
+    text-transform: uppercase;
+}
+
+.rs-calendar-header-title,
+.rs-calendar-table-header-cell {
+    color: var(--color-grey-800);
+    font-family: var(--font-main);
+    font-size: 1.2rem;
+    font-weight: 600;
+    line-height: 1.6rem;
+    letter-spacing: -0.02rem;
+}
+
+.rs-picker-popup {
+    border: 0.1rem solid var(--color-grey-200);
+    border-radius: 0.8rem !important;
+    box-shadow: var(--shadow-8);
+    z-index: 30;
+}
+
+.no-scroll .rs-picker-popup {
+    z-index: 51;
+    /* more then modal */
+}
+
+/* Стили для ячеек календаря */
+.rs-calendar-table-cell-content {
+    padding: 0.6rem !important;
+    border-radius: 50% !important;
+}
+
+.rs-picker-popup .rs-calendar .rs-calendar-table-cell-content {
+    width: 2rem !important;
+    height: 2rem !important;
+    line-height: 0;
+}
+
+.rs-calendar-table-cell-day {
+    font-family: var(--font-main);
+    font-size: 1rem;
+    font-weight: 500;
+    line-height: 1rem;
+}
+
+.rs-calendar-table-cell-disabled:not(.rs-calendar-table-cell-selected) .rs-calendar-table-cell-content {
+    color: var(--color-grey-500) !important;
+    text-decoration: none !important;
+}
+
+.rs-calendar-table-cell-disabled.rs-calendar-table-cell-selected .rs-calendar-table-cell-content,
+.rs-calendar-table-cell-disabled.rs-calendar-table-cell-selected .rs-calendar-table-header-cell-content,
+.rs-calendar-table-cell-disabled.rs-calendar-table-header-cell-selected .rs-calendar-table-cell-content,
+.rs-calendar-table-cell-disabled.rs-calendar-table-header-cell-selected .rs-calendar-table-header-cell-content,
+.rs-calendar-table-header-cell-disabled.rs-calendar-table-cell-selected .rs-calendar-table-cell-content,
+.rs-calendar-table-header-cell-disabled.rs-calendar-table-cell-selected .rs-calendar-table-header-cell-content,
+.rs-calendar-table-header-cell-disabled.rs-calendar-table-header-cell-selected .rs-calendar-table-cell-content,
+.rs-calendar-table-header-cell-disabled.rs-calendar-table-header-cell-selected .rs-calendar-table-header-cell-content {
+    opacity: 1;
+}
+
+.rs-calendar-table-cell-disabled .rs-calendar-table-cell-content:hover {
+    text-decoration: none;
+}
+
+.rs-picker-popup .rs-calendar .rs-calendar-table-cell-disabled:hover .rs-calendar-table-cell-content {
+    color: var(--color-grey-500);
+    background-color: var(--color-white);
+}
+
+.rs-picker-popup .rs-calendar .rs-calendar-table-cell:hover .rs-calendar-table-cell-content {
+    color: var(--color-grey-700);
+    background-color: var(--color-grey-200);
+}
+
+.rs-calendar-table-cell-is-today .rs-calendar-table-cell-content,
+.rs-calendar-table-cell-is-today .rs-calendar-table-cell-content:hover {
+    color: var(--color-white);
+    background-color: var(--color-blue-300);
+}
+
+.rs-calendar-table-cell-selected .rs-calendar-table-cell-content {
+    color: var(--color-blue-400) !important;
+    background-color: var(--color-blue-200) !important;
+    opacity: 1 !important;
+    text-decoration: none !important;
+}
+
+.rs-btn-close:hover,
+.rs-btn-close:hover {
+    color: var(--color-grey-600);
+}
+
+.rs-btn-close svg path,
+.rs-btn-close svg path {
+    stroke: var(--color-grey-600);
+}
+
+.rs-btn-close:hover svg path,
+.rs-btn-close:focus svg path {
+    stroke: var(--color-grey-600);
+}
+
+.rs-input-group:not(.rs-input-group-disabled).rs-input-group-focus,
+.rs-input-group:focus-within {
+    border: 0.1rem solid var(--color-blue-300) !important;
+    outline: 0.2rem solid var(--color-blue-200) !important;
+}
+
+.rs-input-group:not(.rs-input-group-disabled):hover,
+.rs-input-group:not(.rs-input-group-disabled).rs-input-group-focus,
+.rs-input-group:focus-within {
+    border-color: var(--color-blue-300);
+}
+
+.datepicker-wrap {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.datepicker-label {
+    margin-bottom: 0.4rem;
+    display: block;
+    color: var(--color-grey-700);
+}
+
+/*  remove default state error, cus of disabled date in the past */
+.datepicker-error {
+    position: absolute;
+    top: 6.8rem;
+    color: var(--color-red-300);
+}
+
+.datepicker-wrap-error .rs-picker-toggle-wrapper {
+    border: 0.1rem solid var(--color-red-300) !important;
+    border-radius: 0.8rem !important;
+}
+
+.rs-picker-error>.rs-picker-toggle,
+.rs-picker-error>.rs-picker-toggle-wrapper,
+.rs-picker-error>.rs-picker-input-group {
+    border: none !important;
+    box-shadow: none !important;
+    outline: none !important;
+}
+
+.rs-picker-error>.rs-picker-input-group {
+    border: 0.1rem solid var(--color-grey-200) !important;
+    outline: none !important;
+}
+
+/* Apply custom error style via parent */
+.datepicker-wrap-error .rs-picker-toggle {
+    border: 1px solid var(--color-red-300) !important;
+    border-radius: 0.4rem;
+}
+
+.rs-picker:not(.rs-picker-disabled):hover,
+.rs-picker.rs-picker-focused {
+    border: none;
+}
+
+.rs-calendar-table-header-cell-content {
+    font-size: 1.2rem;
+    line-height: 1.66666667;
+    padding-top: 0.2rem;
+    padding-bottom: 0.2rem;
+}
+
+.rs-calendar-table-cell,
+.rs-calendar-table-header-cell {
+    padding: 0.6rem;
+}

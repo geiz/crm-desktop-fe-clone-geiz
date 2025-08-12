@@ -1,0 +1,38 @@
+.container {
+  text-align: end;
+}
+
+.statusWrap {
+  display: flex;
+  gap: 0.5rem;
+  justify-content: flex-end;
+  position: relative;
+  width: initial;
+}
+
+.dropdownIcon {
+  position: absolute;
+  right: -1.8rem;
+  font-size: 1.6rem;
+}
+
+.dropdownLabel {
+  color: var(--color-grey-700);
+  display: flex;
+  gap: 0.6rem;
+  align-items: center;
+}
+
+.newStatus {
+  color: var(--color-grey-900);
+}
+
+.arrowIcon {
+  display: inline-block;
+  transform: rotate(90deg);
+
+  i {
+    font-size: 1.2rem;
+    color: var(--color-grey-700);
+  }
+}

@@ -1,0 +1,64 @@
+.content {
+    margin: 4rem 4.8rem;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    column-gap: 0.8rem;
+    position: relative;
+}
+
+.contentWrapper {
+    margin-top: 3.2rem;
+    display: grid;
+    align-items: start;
+    grid-template-columns: 29.6rem 1fr;
+    gap: 1.9rem 4rem;
+}
+
+.businessUnit {
+    display: flex;
+    align-items: center;
+    column-gap: 2rem;
+    margin-left: 6.4rem;
+}
+
+.businessUnitTitle {
+    color: var(--color-grey-700);
+}
+
+.businessUnitName {
+    color: var(--color-grey-600);
+}
+
+.leftSide {
+    display: flex;
+    flex-direction: column;
+    gap: 2.4rem;
+}
+
+.personalInfo {
+    padding: 3.2rem 2.4rem 4rem 4rem;
+}
+
+.savePdf {
+    color: var(--color-grey-600);
+    position: absolute;
+    right: 0;
+
+    &:hover {
+        color: var(--color-grey-800);
+    }
+
+}
+
+.rejectInfoIcon {
+    font-size: 1.6rem;
+    color: var(--color-grey-500);
+}
+
+.rejectedInfo {
+    margin-left: 1.6rem;
+    margin-right: 1.6rem;
+}

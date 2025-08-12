@@ -1,0 +1,115 @@
+.inputWrap {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.label {
+    margin-bottom: 0.4rem;
+    color: var(--color-grey-900);
+}
+
+.inputContainer {
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.input {
+    padding: 1rem 1.2rem;
+
+    width: 100%;
+
+    color: var(--color-grey-800);
+
+    border: 0.1rem solid var(--color-grey-200);
+    border-radius: 0.8rem;
+    transition: border-color 0.3s ease;
+}
+
+.input:focus {
+    border-color: var(--color-blue-300);
+    outline: solid var(--color-blue-200);
+    outline-width: 0.2rem;
+}
+
+.input:read-only {
+    outline: none;
+    border-color: var(--color-grey-200);
+}
+
+.input:focus.invalid {
+    border-color: var(--color-red-300);
+    outline: none;
+}
+
+.input:not(:read-only, :disabled, .invalid):hover {
+    border-color: var(--color-blue-300);
+}
+
+.input.error:hover {
+    border-color: var(--color-red-300);
+}
+
+.input::placeholder {
+    color: var(--color-grey-600);
+    opacity: 1;
+}
+
+.input:disabled {
+    background-color: transparent;
+    user-select: none;
+    cursor: not-allowed;
+}
+
+.input:disabled::placeholder,
+.disabledWrap .label,
+.disabledWrap .errorText,
+.disabledWrap span,
+.disabledWrap input {
+    color: var(--color-grey-400);
+}
+
+.invalid {
+    border-color: var(--color-red-300);
+}
+
+.searchIcon {
+    position: absolute;
+    left: 1.2rem;
+    font-size: 1.6rem;
+    color: var(--color-grey-500);
+}
+
+.eyeButton {
+    position: absolute;
+    right: 1.2rem;
+    top: 1.4rem;
+
+    font-size: 1.6rem;
+    color: var(--color-grey-600);
+
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.searchWrap .input {
+    padding-left: 3.6rem;
+}
+
+.passwordWrap .input {
+    padding-right: 4rem;
+}
+
+.errorMessage,
+.helperText {
+    position: absolute;
+    bottom: -1.9rem;
+    min-height: 1.6rem;
+}
+
+.helperText {
+    color: var(--color-grey-600);
+}

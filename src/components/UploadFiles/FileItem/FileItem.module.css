@@ -1,0 +1,103 @@
+.fileItem {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 0.8rem;
+    position: relative;
+    padding: 0.6rem 4.4rem 0.6rem 2rem;
+    word-break: break-word;
+
+    &:hover {
+        background-color: var(--color-grey-100);
+    }
+}
+
+.disabled {
+    pointer-events: none;
+    opacity: 0.7;
+}
+
+.bgGrey100 {
+    background-color: var(--color-grey-100);
+}
+
+.grey600 {
+    color: var(--color-grey-600);
+}
+
+.fileInfoWrap {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+}
+
+.fileIcon {
+    font-size: 3.2rem;
+    color: var(--color-grey-400);
+}
+
+.removeButton {
+    padding: 0.5rem;
+    font-size: 1.6rem;
+    color: var(--color-grey-500);
+    background: none;
+    border: none;
+    cursor: pointer;
+
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 1rem;
+}
+
+.checkIcon {
+    width: 1.2rem;
+    height: 1.2rem;
+    font-size: 1.2rem;
+    color: var(--color-white);
+    background-color: var(--color-green-200);
+    border-radius: 50%;
+    position: absolute;
+    right: 1.5rem;
+}
+
+.loaderIcon {
+    width: 1.4rem;
+    height: 1.4rem;
+
+    border: solid var(--color-grey-600);
+    border-width: 0.2rem;
+    border-top: solid var(--color-white);
+    border-top-width: 0.2rem;
+    border-radius: 50%;
+
+    animation: spin 1s linear infinite;
+
+    position: absolute;
+    right: 1.5rem;
+}
+
+.modalContainer {
+    padding: 3.2rem 4rem 2.4rem;
+    width: 68rem;
+}
+
+.modalTitle {
+    margin-bottom: 2.4rem;
+    color: var(--color-grey-700);
+}
+
+.end {
+    float: inline-end;
+    margin-bottom: 2.4rem;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}

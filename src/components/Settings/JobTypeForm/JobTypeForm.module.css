@@ -1,0 +1,19 @@
+.form {
+  width: 60.8rem;
+  display: flex;
+  flex-direction: column;
+  row-gap: 2.4rem;
+}
+
+.selectWrap {
+  display: flex;
+  gap: 1.6rem;
+}
+
+.select {
+  width: 29.6rem;
+}
+
+.summary {
+  margin-bottom: 2.4rem;
+}

@@ -1,0 +1,24 @@
+.warning {
+  padding: 0 6.4rem;
+  background: var(--color-brown-100);
+  color: var(--color-grey-1000);
+  display: flex;
+  max-height: 0;
+  margin: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease, opacity 0.3s ease, padding 0.3s ease, margin 0.3s ease;
+  opacity: 0;
+
+
+  i {
+    color: var(--color-golden-300);
+    margin-right: 0.8rem;
+    font-size: 1.6rem;
+  }
+}
+
+.showWarning {
+  padding: 1.6rem 6.4rem;
+  max-height: 10rem;
+  opacity: 1;
+}

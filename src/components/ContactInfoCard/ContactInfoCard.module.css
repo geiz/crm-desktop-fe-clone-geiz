@@ -1,0 +1,50 @@
+.card {
+    padding: 3.2rem 4rem 4rem;
+    position: relative;
+}
+
+.title {
+    margin-bottom: 2.4rem;
+    color: var(--color-grey-900);
+    text-transform: uppercase;
+}
+
+.cardBody {
+    display: flex;
+    column-gap: 4rem;
+}
+
+.column {
+    display: flex;
+    flex-direction: column;
+    row-gap: 1.6rem;
+}
+
+.leftColumn {
+    width: 22.5rem;
+}
+
+.rightColumn {
+    width: 26.3rem;
+}
+
+.row {
+    display: flex;
+    column-gap: 0.8rem;
+}
+
+.icon {
+    font-size: 1.6rem;
+    color: var(--color-grey-600);
+}
+
+.value {
+    flex: 1;
+    color: var(--color-grey-900);
+}
+
+.actionsBtn {
+    position: absolute;
+    right: 2.4rem;
+    top: 2.4rem;
+}

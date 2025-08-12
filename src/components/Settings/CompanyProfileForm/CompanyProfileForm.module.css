@@ -1,0 +1,50 @@
+.form {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 0 1.6rem;
+  height: fit-content;
+  width: 60.8rem;
+  grid-template-areas:
+    'name .'
+    'phone email'
+    'timezone timezone'
+    'selectAddress selectAddress'
+    'warning warning'
+    'streetAddress city'
+    'state country'
+    'zipCode apartment'
+    'resetBtn resetBtn'
+    'formActions formActions';
+}
+
+.formActions {
+  display: flex;
+  gap: 1rem;
+  justify-content: flex-end;
+  margin: 2.4rem 0;
+  grid-area: formActions;
+}
+
+.name,
+.phone,
+.email,
+.timezone {
+  margin-bottom: 2.4rem;
+}
+
+.name {
+  grid-area: name;
+}
+
+.phone {
+  grid-area: phone;
+
+}
+
+.email {
+  grid-area: email;
+}
+
+.timezone {
+  grid-area: timezone;
+}

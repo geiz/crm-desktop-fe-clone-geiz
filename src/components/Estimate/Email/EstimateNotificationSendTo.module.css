@@ -1,0 +1,115 @@
+.sendContainer {
+    width: 37.6rem;
+}
+
+.content {
+    padding: 3.2rem 4rem 4rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2.4rem;
+}
+
+.methodSelector {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 2.4rem;
+}
+
+.title {
+    color: var(--color-grey-700);
+    margin: 0;
+}
+
+.tabs {
+    margin: 0;
+    padding: 0;
+    width: fit-content;
+    display: flex;
+    position: relative;
+    list-style: none;
+    border-bottom: 0.2rem solid var(--color-blue-200);
+}
+
+.tab {
+    padding: 1.2rem 1.6rem;
+    color: var(--color-grey-700);
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    font-size: 1.4rem;
+    font-weight: 500;
+    transition: background-color 0.4s ease-out;
+}
+
+.tab:hover {
+    background-color: var(--color-grey-100);
+}
+
+.tab.active {
+    color: var(--color-blue-500);
+}
+
+.line {
+    height: 0.3rem;
+    position: absolute;
+    bottom: -0.2rem;
+    left: 0;
+    background-color: var(--color-blue-300);
+    transition:
+        width 0.4s ease-out,
+        transform 0.4s ease-out;
+}
+
+.recipientSection {
+    display: flex;
+    flex-direction: column;
+    gap: 2.4rem;
+}
+
+.recipientTitle {
+    color: var(--color-grey-700);
+    margin: 0;
+}
+
+.recipientList {
+    display: flex;
+    flex-direction: column;
+    gap: 2.4rem;
+}
+
+.actions {
+    display: flex;
+    gap: 2.4rem;
+    justify-content: flex-end;
+    margin-top: 4rem;
+}
+
+.recipientWithTrash {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.removeButton {
+    color: var(--color-grey-600);
+    font-size: 1.6rem;
+    flex-shrink: 0;
+}
+
+.removeButton:hover {
+    color: var(--color-red-300);
+}
+
+.divider {
+    border: none;
+    border-top: 0.1rem solid var(--color-grey-200);
+}
+
+.recipientList:not(:has(.divider))+.input {
+    padding-top: 0.8rem;
+}
+
+.input {
+    width: 100%;
+}

@@ -1,0 +1,29 @@
+.block {
+    padding: 3.2rem 0 4rem
+}
+
+.title {
+    color: var(--color-grey-700);
+    margin: 0 4rem 2.4rem
+}
+
+.header {
+    padding: 0 4.8rem 1.5rem;
+    display: grid;
+    grid-template-columns: 28rem 2.4rem;
+    gap: 4rem;
+    position: relative;
+    color: var(--color-grey-700);
+}
+
+.tableWrapper :global(.table-head:after) {
+    display: none
+}
+
+.tableWrapper :global(.table-head .body-12R) {
+    font-size: 1.4rem;
+    color: var(--color-grey-600);
+    font-weight: 500;
+    line-height: 1.7rem;
+    letter-spacing: -0.02rem;
+}

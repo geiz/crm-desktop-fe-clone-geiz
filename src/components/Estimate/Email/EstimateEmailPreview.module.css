@@ -1,0 +1,132 @@
+.paper {
+    padding: 0 !important;
+    position: relative;
+}
+
+.paperContent {
+    padding: 3.2rem 4.0rem 4.0rem;
+    width: 92.8rem;
+}
+
+.generalInfo {
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 4.0rem;
+    border-bottom: 0.1rem solid var(--color-grey-200);
+    padding-bottom: 2.4rem
+}
+
+.companyBlock {
+    display: flex;
+    gap: 1.6rem;
+    width: 32rem;
+    padding-right: 4.8rem;
+}
+
+.logoWrapper {
+    width: 6.4rem;
+    min-height: 6.4rem;
+}
+
+.companyInfo {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+}
+
+.companyRow {
+    display: flex;
+    gap: 0.4rem;
+}
+
+.icon {
+    font-size: 1.6rem;
+    color: var(--color-grey-600);
+    padding-top: 0.2rem
+}
+
+.companyName {
+    color: var(--color-grey-700);
+    margin-bottom: 0.4rem;
+}
+
+.text {
+    color: var(--color-grey-700);
+}
+
+.contactInfoBlock {
+    width: 20rem
+}
+
+.blockTitle {
+    color: var(--color-grey-600);
+    margin-bottom: 1.2rem;
+}
+
+.infoWrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+}
+
+.estimateInfoBlock {
+    display: flex;
+    gap: 2.4rem;
+    padding-top: 1.6rem;
+}
+
+.estimateInfoTitle {
+    color: var(--color-grey-600);
+    border-right: 0.1rem solid var(--color-grey-200);
+    padding-right: 2.4rem;
+}
+
+.estimateInfoTitle span {
+    color: var(--color-grey-800);
+    padding-left: 0.8rem;
+}
+
+.subtotalBlock {
+    border-top: 0.1rem solid var(--color-grey-200);
+    padding: 2.4rem 2.4rem 0.8rem;
+    margin-top: 2.4rem;
+}
+
+.subtotalRow {
+    display: flex;
+    justify-content: space-between;
+    width: 32.8rem;
+    padding: 1.6rem 0;
+    margin-left: auto;
+    color: var(--color-grey-700);
+}
+
+.subtotalRow:not(:last-child) {
+    border-bottom: 0.1rem solid var(--color-grey-200);
+}
+
+.total {
+    color: var(--color-grey-700);
+}
+
+.agreement {
+    color: var(--color-grey-800);
+    padding: 1.6rem 0;
+    border-top: 0.1rem solid var(--color-grey-200);
+}
+
+.terms {
+    color: var(--color-grey-600);
+}
+
+.savePdf {
+    color: var(--color-grey-600);
+    position: absolute;
+    right: 0;
+    top: -2.5rem;
+
+    &:hover {
+        color: var(--color-grey-800);
+    }
+
+}

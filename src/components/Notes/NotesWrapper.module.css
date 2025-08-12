@@ -1,0 +1,15 @@
+.notes {
+    padding-right: 1.6rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.6rem;
+}
+
+.noNotes {
+    color: var(--color-grey-600);
+}
+
+.addBtn {
+    margin-top: 2.4rem;
+    height: 4rem;
+}

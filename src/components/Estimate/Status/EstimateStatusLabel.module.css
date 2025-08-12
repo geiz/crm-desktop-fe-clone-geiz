@@ -1,0 +1,30 @@
+.label {
+    border-radius: 0.4rem;
+    background: var(--color-grey-200);
+    padding: 0.4rem 1.2rem;
+}
+
+.label span {
+    text-transform: capitalize;
+    color: var(--color-grey-700);
+}
+
+.draft {
+    background: var(--color-grey-200);
+}
+
+.pending {
+    background: var(--color-golden-100);
+}
+
+.approved {
+    background: var(--color-mint-100);
+}
+
+.rejected {
+    background: var(--color-iron-grey-100);
+}
+
+.sold {
+    background: var(--color-green-100);
+}

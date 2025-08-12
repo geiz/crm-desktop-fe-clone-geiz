@@ -1,0 +1,110 @@
+:root {
+    /* Fonts */
+    --font-main: 'Inter', sans-serif;
+
+    /* Colors */
+    --color-white: #ffffff;
+    --color-black: #000000;
+
+    --color-grey-100: #f4f4f9;
+    --color-grey-200: #dfdfec;
+    --color-grey-300: #cdcfd6;
+    --color-grey-400: #b4b7bf;
+    --color-grey-500: #9c9fa9;
+    --color-grey-600: #7b7f8c;
+    --color-grey-700: #5a5f6f;
+    --color-grey-800: #484c59;
+    --color-grey-900: #363943;
+    --color-grey-1000: #24262c;
+
+    --color-blue-100: #f5f7fd;
+    --color-blue-200: #cddaee;
+    --color-blue-300: #4371fe;
+    --color-blue-400: #0b5cad;
+    --color-blue-500: #1b2d66;
+
+    --color-astronaut-blue-100: #a7bbc6;
+    --color-astronaut-blue-200: #003b5c;
+
+    --color-ultramarine-100: #bfcbff;
+    --color-ultramarine-200: #001da2;
+
+    --color-curious-blue-100: #81cdf2;
+    --color-curious-blue-200: #039be5;
+
+    --color-plum-100: #c2acff;
+    --color-plum-200: #5c4b8a;
+
+    --color-lilac-100: #d5b7ff;
+    --color-lilac-200: #6200ea;
+
+    --color-violet-100: #b4ace6;
+    --color-violet-200: #6a5acd;
+
+    --color-blackberry-100: #ffa1e3;
+    --color-blackberry-200: #581845;
+
+    --color-pink-100: #ffbedf;
+    --color-pink-200: #d5006d;
+
+    --color-red-100: #ffbfbf;
+    --color-red-200: #e2b6b6;
+    --color-red-300: #ef4444;
+    --color-red-400: #dc2626;
+    --color-red-500: #541212;
+
+    --color-orange-100: #f8c197;
+    --color-orange-200: #d65d00;
+
+    --color-ohre-100: #ffd1a4;
+    --color-ohre-200: #c77b30;
+
+    --color-golden-100: #ebdcb3;
+    --color-golden-200: #c4951b;
+    --color-golden-300: #a37c16;
+    --color-golden-400: #624a0d;
+
+    --color-brown-100: #e0d4d2;
+    --color-brown-200: #7b5e57;
+
+    --color-iron-grey-100: #d3d0d0;
+    --color-iron-grey-200: #5e5955;
+
+    --color-green-100: #d6e6d7;
+    --color-green-200: #13c750;
+    --color-green-300: #029e37;
+    --color-green-400: #122f05;
+
+    --color-mint-100: #c2f2d7;
+    --color-mint-200: #5e846f;
+
+    --color-turquoise-100: #88ccc4;
+    --color-turquoise-200: #3c6761;
+
+    --color-camarone-100: #b6caae;
+    --color-camarone-200: #1b5e20;
+
+    /* Shadow */
+    --shadow-2: 0rem 0.2rem 0.4rem 0rem rgba(0, 0, 0, 0.12);
+    --shadow-4: 0rem 0.4rem 0.8rem 0rem rgba(0, 0, 0, 0.1);
+    --shadow-6: 0rem 0.6rem 1.2rem 0rem rgba(0, 0, 0, 0.1);
+    --shadow-8: 0rem 0.8rem 1.6rem 0rem rgba(123, 127, 140, 0.08);
+    --shadow-10: 0rem 0rem 1.2rem 0rem rgba(0, 0, 0, 0.1);
+
+    /* Media */
+    --media-tablet: 768px;
+    --media-mob: 576px;
+
+    /* Header */
+    --header-height: 6.8rem;
+
+    /* Scrollbar */
+    --scrollbar-width: 0.4rem;
+    --scrollbar-thumb-bg: var(--color-grey-300);
+    --scrollbar-thumb-radius: 0.4rem;
+    --scrollbar-track-bg: transparent;
+    --scrollbar-track-shadow: inset 0 0 0.5rem var(--color-grey-200);
+    --scrollbar-track-radius: 0.4rem;
+    --scrollbar-border-left: 0.15rem solid transparent;
+    --scrollbar-border-right: 0.15rem solid transparent;
+}

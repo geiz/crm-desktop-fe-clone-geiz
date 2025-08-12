@@ -1,0 +1,33 @@
+.rs-inline-edit {
+    z-index: 0;
+}
+
+.rs-inline-edit .rs-plaintext {
+    padding: 1rem 1.2rem;
+
+    color: var(--color-grey-700);
+    font-family: var(--font-main);
+    font-size: 1.4rem;
+    font-weight: 400;
+    line-height: 2.2rem;
+
+    border-radius: 0.8rem;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.rs-inline-edit .rs-plaintext:hover {
+    background-color: var(--color-grey-100);
+}
+
+.rs-input {
+    resize: vertical;
+}
+
+.rs-input::-webkit-resizer {
+    display: none;
+}
+
+.rs-input:focus {
+    border: 0.1rem solid var(--color-blue-300);
+    outline: 0.2rem solid var(--color-blue-200);
+}

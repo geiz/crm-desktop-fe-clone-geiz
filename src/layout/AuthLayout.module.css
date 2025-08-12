@@ -1,0 +1,32 @@
+.authLayout {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    background-color: var(--color-white);
+    overflow: hidden;
+}
+
+.background {
+    padding: 7.7rem 12.4rem;
+    height: 100%;
+    width: 57%;
+    background: #051933 url('../assets/img/auth-bg.jpg') no-repeat left top / cover;
+}
+
+.logo {
+    width: 10.6rem;
+    margin-bottom: 8rem;
+}
+
+.welcome {
+    width: 30rem;
+}
+
+.content {
+    width: 43%;
+}
+
+.contentInner {
+    margin: 0 auto;
+    width: 29.6rem;
+}

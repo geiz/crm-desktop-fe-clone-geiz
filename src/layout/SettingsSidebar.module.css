@@ -1,0 +1,99 @@
+.sidebar {
+    padding: 4.4rem 3.2rem 4.4rem 4.8rem;
+
+    width: 24rem;
+
+    display: flex;
+    flex-direction: column;
+
+    background: var(--color-grey-100);
+}
+
+.title {
+    margin-bottom: 5.6rem;
+    color: var(--color-grey-700);
+}
+
+.menuItem {
+    margin-bottom: 1.6rem;
+}
+
+.menuButton {
+    padding: 0;
+
+    width: 100%;
+
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+
+    color: var(--color-grey-600);
+    text-transform: uppercase;
+    text-align: left;
+    white-space: nowrap;
+
+    background: none;
+    border: none;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.menuButton:hover,
+.menuButton.active {
+    color: var(--color-grey-800);
+}
+
+.subMenu {
+    height: 0;
+    overflow: hidden;
+    transition:
+        height 0.3s ease-out,
+        opacity 0.2s ease-out;
+    opacity: 0;
+}
+
+.subMenu.open {
+    margin: 0.6rem 0;
+    height: auto;
+    opacity: 1;
+}
+
+.subMenu>* {
+    padding: 0.8rem;
+
+    display: block;
+
+    position: relative;
+
+    color: var(--color-grey-600);
+    text-decoration: none;
+
+    transition: background 0.2s;
+}
+
+.subMenu>*:hover,
+.subMenu>*.active {
+    color: var(--color-grey-800);
+}
+
+.subMenu>*.active::before {
+    content: '';
+
+    width: 0.2rem;
+    height: 50%;
+
+    position: absolute;
+    left: 0;
+    top: 0;
+
+    background-color: var(--color-grey-600);
+    transform: translateY(50%);
+}
+
+.arrow {
+    transition: transform 0.3s ease-out;
+}
+
+.rotate180 {
+    transform: rotate(180deg) translateY(0.2rem);
+}

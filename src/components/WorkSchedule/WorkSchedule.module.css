@@ -1,0 +1,238 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    gap: 2.4rem;
+}
+
+.dayConfigWrapper {
+    width: 100%;
+}
+
+.dayTabs {
+    display: flex;
+    gap: 0.4rem;
+}
+
+.dayTab {
+    position: relative;
+    padding: 0.8rem 1.2rem;
+    width: 6rem;
+    background: var(--color-blue-300);
+    border: none;
+    border-radius: 0.8rem;
+    color: white;
+    font-family: Inter;
+    font-size: 1.4rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.dayTab:hover:not(:disabled) {
+    background-color: var(--color-blue-400);
+}
+
+.dayTab.active {
+    background-color: var(--color-blue-300);
+    color: white;
+}
+
+.dayTab:not(.active) {
+    background: transparent;
+    color: var(--color-blue-300);
+    border: none;
+}
+
+.dayTab:not(.active):hover:not(:disabled) {
+    background-color: var(--color-blue-50);
+}
+
+.dayTab:disabled {
+    cursor: not-allowed;
+    opacity: 0.5;
+}
+
+.statusDot {
+    position: absolute;
+    top: 0.6rem;
+    right: 0.6rem;
+    width: 0.8rem;
+    height: 0.8rem;
+    border-radius: 50%;
+    z-index: 1;
+}
+
+.statusDot.enabled {
+    background-color: var(--color-green-200);
+}
+
+.statusDot.disabled {
+    background-color: var(--color-grey-400);
+}
+
+.dayConfig {
+    display: flex;
+    flex-direction: column;
+    gap: 2.4rem;
+}
+
+.dayHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 1.6rem;
+    gap: 2.4rem;
+}
+
+.dayTitle {
+    color: var(--color-grey-900);
+    font-family: Inter;
+    font-size: 1.8rem;
+    font-weight: 600;
+    margin: 0;
+    margin-bottom: 1.6rem;
+}
+
+.dayName {
+    color: var(--color-grey-900);
+    font-family: Inter;
+    font-size: 1.6rem;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+}
+
+.leftColumn {
+    display: flex;
+    flex-direction: column;
+    gap: 1.6rem;
+    flex: 1;
+}
+
+.rightColumn {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    flex: 1;
+}
+
+.divider {
+    width: 0.0625rem;
+    height: 4.4rem;
+    flex-shrink: 0;
+    background: var(--Gray-200, #DFDFEC);
+    align-self: center;
+}
+
+.dayToggleRow {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 0.8rem;
+}
+
+.toggleContainer {
+    position: relative;
+    display: inline-block;
+    width: 4.4rem;
+    height: 2.4rem;
+    cursor: pointer;
+}
+
+.toggleInput {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.toggleSlider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: var(--color-grey-300);
+    transition: 0.3s;
+    border-radius: 2.4rem;
+}
+
+.toggleSlider:before {
+    position: absolute;
+    content: "";
+    height: 1.8rem;
+    width: 1.8rem;
+    left: 0.3rem;
+    bottom: 0.3rem;
+    background-color: white;
+    transition: 0.3s;
+    border-radius: 50%;
+}
+
+.toggleInput:checked+.toggleSlider {
+    background-color: var(--color-blue-300);
+}
+
+.toggleInput:checked+.toggleSlider:before {
+    transform: translateX(2rem);
+}
+
+.toggleInput:disabled+.toggleSlider {
+    cursor: not-allowed;
+    opacity: 0.5;
+}
+
+.maxJobsContainer {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin-bottom: 1.6rem;
+}
+
+.maxJobsInput {
+    width: 16rem;
+}
+
+.preferredTimeRow {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 0.8rem;
+    margin-bottom: 1.6rem;
+}
+
+.preferredTimeLabel {
+    color: var(--color-grey-800);
+    font-family: Inter;
+    font-size: 1.6rem;
+    font-weight: 500;
+}
+
+.workTimeSection {
+    display: flex;
+    flex-direction: column;
+    gap: 1.6rem;
+    margin-bottom: 1.6rem;
+}
+
+.workTimeTitle {
+    color: var(--color-grey-800);
+    font-family: Inter;
+    font-size: 1.6rem;
+    font-weight: 600;
+    margin: 0;
+}
+
+.timeInputs {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.6rem;
+}
+
+.timeInput {
+    display: flex;
+    flex-direction: column;
+}

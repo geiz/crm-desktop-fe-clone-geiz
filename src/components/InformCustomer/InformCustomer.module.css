@@ -1,0 +1,33 @@
+.container {
+  padding: 4rem;
+  background: var(--color-grey-100);
+  display: flex;
+  flex-direction: column;
+  gap: 3.2rem;
+  align-items: center;
+  color: var(--color-grey-900);
+}
+
+.btns {
+  display: flex;
+  gap: 1.6rem;
+  align-items: center;
+
+  button {
+    height: 3.6rem;
+  }
+}
+
+.btnOn {
+  i {
+    color: var(--color-green-200);
+  }
+}
+
+.btnOff {
+  color: var(--color-grey-900);
+
+  i {
+    color: var(--color-grey-400);
+  }
+}

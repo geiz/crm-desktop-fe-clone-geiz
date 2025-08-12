@@ -1,0 +1,20 @@
+.menuEnterAddress {
+  margin: 0 1.2rem;
+  padding: 1.2rem;
+  color: var(--color-blue-400);
+  text-align: center;
+  cursor: pointer;
+}
+
+.menuOption {
+  padding: 0.9rem;
+  cursor: pointer;
+  color: var(--color-grey-600);
+  background-color: transparent;
+  border-radius: 0.8rem;
+  transition: background-color 0.2s ease;
+}
+
+.grey100bg {
+  background-color: var(--color-grey-100);
+}

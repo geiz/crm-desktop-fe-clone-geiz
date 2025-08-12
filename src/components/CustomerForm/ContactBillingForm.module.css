@@ -1,0 +1,72 @@
+.gridBlockForm {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	grid-gap: 0 1.6rem;
+	grid-template-areas:
+		'name category'
+		'phone email'
+		'additionalMethodSection additionalMethodSection'
+		'selectAddress selectAddress'
+		'warning warning'
+		'streetAddress city'
+		'state country'
+		'zipCode apartment'
+		'buzzer resetBtn';
+}
+
+.name,
+.phone,
+.email {
+	margin-bottom: 2.4rem;
+}
+
+.name {
+	grid-area: name;
+}
+
+.phone {
+	grid-area: phone;
+
+}
+
+.email {
+	grid-area: email;
+}
+
+.category {
+	grid-area: category;
+	margin-left: 2.4rem;
+}
+
+.radioWrap {
+	display: flex;
+	gap: 1.6rem;
+}
+
+.radioLabel {
+	margin-bottom: 1.5rem;
+	color: var(--color-gray-900);
+}
+
+.additionalMethodSection {
+	margin: 0;
+	grid-area: additionalMethodSection;
+	position: relative;
+}
+
+.additionalMethodSection.topDivider {
+	margin: 1.2rem 0 0;
+	padding: 3.2rem 0 0;
+	display: flex;
+	flex-direction: column;
+	gap: 2.4rem;
+
+	&::before {
+		content: '';
+		position: absolute;
+		top: 0;
+		width: 69.2rem;
+		height: 0.01rem;
+		background-color: var(--color-grey-200);
+	}
+}

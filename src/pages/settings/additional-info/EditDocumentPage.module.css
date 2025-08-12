@@ -1,0 +1,16 @@
+.container {
+    padding: 5.6rem 4.8rem;
+}
+
+.title {
+    padding-bottom: 3.2rem;
+    color: var(--color-grey-600);
+}
+
+.itemTitle {
+    padding-top: 2rem;
+    margin-bottom: 2rem;
+    width: 58rem;
+    color: var(--color-grey-800);
+    border-top: 0.1rem solid var(--color-grey-200);
+}

@@ -1,0 +1,204 @@
+/* input */
+.rs-picker-default.custom-checkpicker .rs-picker-toggle {
+    padding-right: 1.8rem;
+    padding-left: 1.8rem;
+    border-color: transparent;
+    border-radius: 0.8rem;
+    transition: background-color 0.2s ease-in-out;
+}
+
+/* input states */
+.rs-picker-default:not(.rs-picker-disabled).custom-checkpicker .rs-picker-toggle:hover,
+.rs-picker-default:not(.rs-picker-disabled).custom-checkpicker .rs-picker-toggle:focus,
+.rs-picker-default:not(.rs-picker-disabled).custom-checkpicker .rs-picker-toggle-active {
+    border-color: transparent;
+    box-shadow: none;
+}
+
+/* input states 2 */
+.rs-picker-default:not(.rs-picker-disabled).custom-checkpicker .rs-picker-toggle:hover {
+    background-color: var(--color-grey-100) !important;
+}
+
+/* input value - wrapper */
+.rs-picker-default.custom-checkpicker .rs-picker-toggle-value {
+    display: flex;
+    align-items: center;
+}
+
+/* prevent the height of the input from jumping when the items counter appears */
+.rs-picker-default.custom-checkpicker .rs-stack {
+    height: 2.2rem;
+}
+
+/* input value  - items */
+.rs-picker-default.custom-checkpicker .rs-picker-value-item,
+.rs-picker-default.custom-checkpicker .rs-picker-value-separator {
+    color: var(--color-grey-800);
+}
+
+.rs-picker-default.custom-checkpicker .rs-picker-toggle.rs-btn {
+    padding-top: 0.7rem;
+    padding-bottom: 0.7rem;
+}
+
+/* count of selected items */
+.rs-picker-default.custom-checkpicker .rs-picker-value-count {
+    margin: 0 0 0 0.8rem;
+    padding: 0;
+    width: 2.2rem;
+    height: 2.2rem;
+    font-family: var(--font-main);
+    font-size: 1.4rem;
+    background-color: var(--color-grey-600);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+    line-height: 0.2rem;
+}
+
+/* ====== dropdown styles ====== */
+
+/* dropdown wrapper */
+.rs-picker-popup {
+    padding: 0.6rem 0 !important;
+}
+
+/* dropdown options labels */
+.rs-picker-popup .rs-checkbox-label {
+    font-family: var(--font-main);
+    font-size: 1.4rem;
+    font-weight: 500;
+    line-height: 1.7rem;
+    letter-spacing: -0.02rem;
+    color: var(--color-grey-600);
+}
+
+/* search input */
+.rs-picker-popup .rs-input {
+    padding: 1rem 1.2rem;
+    font-size: 1.4rem;
+}
+
+/* search input - wrap */
+.rs-picker-popup .rs-search-box {
+    padding: 0.6rem 1.2rem 0.6rem !important;
+}
+
+/* search input - wrap 2 */
+.rs-picker-popup .rs-input-group {
+    border: 0.1rem solid var(--color-grey-200);
+}
+
+/* search icon - wrap */
+.rs-picker-popup .rs-input-group-addon {
+    padding: 1rem 1.2rem;
+}
+
+/* search icon - svg */
+.rs-picker-popup .rs-search-box-icon {
+    width: 1.6rem;
+    height: 1.6rem;
+    fill: var(--color-grey-600);
+}
+
+/* dropdown options - item */
+.rs-picker-popup .rs-check-item .rs-checkbox-checker>label {
+    padding: 1.3rem 1.2rem 1.3rem 3.8rem;
+    line-height: 2rem;
+}
+
+/* dropdown options - item checkbox - hover */
+.rs-picker-popup .rs-checkbox-checker>label:hover .rs-checkbox-control .rs-checkbox-inner::before {
+    border-color: var(--color-grey-500);
+}
+
+/* dropdown options - item - hover */
+.rs-picker-popup .rs-check-item:not(.rs-checkbox-disabled):hover,
+.rs-picker-popup .rs-check-item:focus,
+.rs-picker-popup .rs-check-item.rs-check-item-focus {
+    background-color: var(--color-grey-100);
+    border-radius: 0.8rem;
+}
+
+/* dropdown options - item - height */
+.rs-picker-popup .rs-check-item .rs-checkbox-checker {
+    min-height: 3.6rem;
+}
+
+/* dropdown options - checkbox */
+.rs-picker-popup .rs-check-item .rs-checkbox-checker .rs-checkbox-control {
+    left: 1.2rem;
+    top: 1.3rem;
+}
+
+/* dropdown options - checkbox - checked */
+.rs-picker-popup .rs-checkbox-checked .rs-checkbox-control .rs-checkbox-inner::before,
+.rs-picker-popup .rs-checkbox-checked .rs-checkbox-indeterminate .rs-checkbox-control .rs-checkbox-inner::before {
+    background-color: var(--color-blue-300);
+    border: 0.1rem solid var(--color-blue-300);
+    border-radius: 0.4rem;
+    width: 1.6rem;
+    height: 1.6rem;
+}
+
+/* dropdown options - checkbox - checked - icon */
+.rs-picker-popup .rs-checkbox-checked .rs-checkbox-control .rs-checkbox-inner::after {
+    margin-top: 0.2rem;
+    margin-left: 0.5rem;
+    border-width: 0 0.2rem 0.2rem 0;
+    width: 0.6rem;
+    height: 0.9rem;
+}
+
+/* dropdown options - checkbox - unchecked */
+.rs-picker-popup .rs-checkbox-control .rs-checkbox-inner::before {
+    border: 0.1rem solid var(--color-grey-400);
+    width: 1.6rem;
+    height: 1.6rem;
+    border-radius: 0.4rem;
+}
+
+.rs-picker-popup .rs-checkbox-control [type='checkbox'] {
+    min-width: 3.6rem;
+    min-height: 3.6rem;
+    top: -0.1rem;
+    right: -0.1rem;
+    bottom: -0.1rem;
+    left: -0.1rem;
+}
+
+.rs-picker-popup .rs-checkbox-control::before {
+    border-radius: 0.3rem;
+    border: 0.1rem solid var(--color-grey-300);
+}
+
+.rs-picker-popup .rs-picker-check-menu-items {
+    max-height: 32rem !important;
+}
+
+.rs-picker-popup .rs-highlight-mark {
+    background-color: transparent;
+    font-weight: 600;
+    color: var(--color-grey-900);
+}
+
+/* dropdown scrollbar */
+.rs-picker-check-menu-items::-webkit-scrollbar {
+    width: var(--scrollbar-width);
+}
+
+.rs-picker-check-menu-items::-webkit-scrollbar-thumb {
+    background: var(--scrollbar-thumb-bg);
+    border-radius: var(--scrollbar-thumb-radius);
+}
+
+.rs-picker-check-menu-items::-webkit-scrollbar-track {
+    background: var(--scrollbar-track-bg);
+    box-shadow: var(--scrollbar-track-shadow);
+    border-radius: var(--scrollbar-track-radius);
+    border-left: var(--scrollbar-border-left);
+    border-right: var(--scrollbar-border-right);
+}

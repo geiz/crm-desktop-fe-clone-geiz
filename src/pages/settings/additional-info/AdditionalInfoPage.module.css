@@ -1,0 +1,77 @@
+.container {
+    padding: 5.6rem 4.8rem;
+}
+
+.title {
+    padding-bottom: 3.2rem;
+    color: var(--color-grey-600);
+}
+
+.item {
+    padding: 1.6rem 0;
+
+    width: 58rem;
+
+    display: flex;
+    justify-content: space-between;
+    gap: 2.4rem;
+
+    border-bottom: 0.1rem solid var(--color-grey-200);
+}
+
+.item:first-of-type {
+    border-top: 0.1rem solid var(--color-grey-200);
+}
+
+.itemContentWrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 1.6rem;
+}
+
+.itemTitle {
+    color: var(--color-grey-800);
+}
+
+.itemText {
+    height: 8rem;
+    color: var(--color-grey-700);
+    overflow: hidden;
+    transition: height 0.5s ease-out;
+}
+
+.showMoreBtn {
+    padding: 0;
+
+    width: fit-content;
+
+    display: flex;
+    align-items: center;
+
+    color: var(--color-blue-400);
+
+    border: transparent;
+    cursor: pointer;
+    background: transparent;
+}
+
+.iconDropDown {
+    font-size: 1.6rem;
+    transition: transform 0.3s ease-out;
+}
+
+.iconDropDown.active {
+    transform: scaleY(-1);
+}
+
+.iconPlus {
+    width: 1.6rem;
+    font-size: 1.6rem;
+    color: var(--color-grey-500);
+    cursor: pointer;
+    transition: transform 0.3s ease-out;
+}
+
+a {
+    text-decoration: none;
+}

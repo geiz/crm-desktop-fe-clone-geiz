@@ -1,0 +1,52 @@
+.notes {
+    padding-right: 1.6rem;
+}
+
+.notes > div:first-child {
+    padding-top: 1.2rem;
+    border-top: 0.1rem solid var(--color-grey-200);
+}
+
+.addButton {
+    padding: 0;
+}
+
+.note {
+    padding-bottom: 1.2rem;
+    margin-bottom: 1.2rem;
+    width: 100%;
+    border-bottom: 0.1rem solid var(--color-grey-200);
+}
+
+.header {
+    margin-bottom: 1.2rem;
+    display: flex;
+    align-items: center;
+    color: var(--color-grey-600);
+}
+
+.header button {
+    font-size: 1.6rem;
+}
+
+.createdAt {
+    margin-right: auto;
+}
+
+.edit {
+    color: var(--color-grey-500);
+}
+
+.trash {
+    margin-left: 1.8rem;
+    color: var(--color-red-300);
+}
+
+.text {
+    color: var(--color-grey-800);
+}
+
+.noNotes {
+    padding-bottom: 1.2rem;
+    color: var(--color-grey-600);
+}

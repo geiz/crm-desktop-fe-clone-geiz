@@ -1,0 +1,6 @@
+ .popoverContainer {
+   padding: 1.2rem 1.6rem !important;
+   max-width: 34rem;
+   border-radius: 0.8rem !important;
+   box-shadow: var(--shadow-10) !important;
+ }

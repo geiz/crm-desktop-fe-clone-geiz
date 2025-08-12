@@ -1,0 +1,43 @@
+.form {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2.4rem 1.6rem;
+}
+
+.title {
+  grid-column: span 2;
+  color: var(--color-grey-700);
+}
+
+.radioGroup {
+  padding-left: 2.4rem;
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: 3.2rem;
+  align-items: flex-start;
+}
+
+.radioGroupLabel {
+  width: 100%;
+  color: var(--color-grey-700);
+}
+
+.fullWidth {
+  grid-column: span 2;
+}
+
+.uploadFiles {
+  margin-top: 2rem;
+  max-height: 8.3rem;
+}
+
+.notifications {
+  margin-top: 1.6rem;
+  display: flex;
+  flex-direction: column;
+  row-gap: 1.6rem;
+}
+
+.notifications h2 {
+  margin-bottom: 0.8rem;
+}

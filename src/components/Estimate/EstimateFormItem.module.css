@@ -1,0 +1,118 @@
+.container {
+    padding-top: 2.4rem;
+
+    display: flex;
+    flex-direction: column;
+    gap: 2.4rem;
+
+    position: relative;
+}
+
+.container:not(:first-child) {
+    padding-top: 4rem;
+    border-top: 0.1rem solid var(--color-grey-200);
+}
+
+.row {
+    width: 100%;
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 1.6rem;
+}
+
+.itemNameSelect {
+    width: 50.6rem;
+    flex-shrink: 0;
+}
+
+.quantityInput input,
+.priceInput input,
+.deleteBtn {
+    height: 4.4rem;
+}
+
+.quantityInput {
+    width: 7.2rem;
+}
+
+.partNumberInput {
+    width: 21.8rem;
+}
+
+.currency {
+    position: absolute;
+    left: 1.2rem;
+    color: var(--color-grey-800);
+}
+
+.priceInput {
+    width: 13rem;
+}
+
+.priceInput input {
+    padding-left: 2.4rem;
+    height: 4.4rem;
+}
+
+.deleteBtn {
+    padding: 1.2rem;
+    margin-left: 1.8rem;
+    margin-right: 0.2rem;
+
+    width: 4.4rem;
+
+    font-size: 2rem;
+    align-self: end;
+}
+
+.serviceSummary {
+    flex: 1;
+}
+
+.materialSummary {
+    width: 50.6rem;
+}
+
+.loaderWrapper {
+    position: absolute;
+    top: 1rem;
+    right: 1.2rem;
+}
+
+.loaderWrapper :global(.rs-loader .rs-loader-spin) {
+    width: 2rem;
+    height: 2rem;
+}
+
+.container:not(:first-child) .statusMessage,
+.container:not(:first-child) .loaderWrapper {
+    top: 2.4rem;
+}
+
+.statusMessage {
+    display: flex;
+    align-items: center;
+    column-gap: 0.4rem;
+
+    position: absolute;
+    top: 1rem;
+    left: calc(100% - 2.4rem);
+
+    color: var(--color-grey-500);
+
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    transform: translateX(-50%);
+}
+
+.statusMessage i {
+    color: var(--color-grey-900);
+}
+
+.statusMessage i {
+    font-size: 1.6rem;
+}
+
+.statusMessageVisible {
+    opacity: 1;
+}

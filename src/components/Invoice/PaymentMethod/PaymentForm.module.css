@@ -1,0 +1,50 @@
+.paymentForm {
+  padding: 3.2rem 9.5rem 0rem;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--color-grey-100);
+  flex-grow: 1;
+  overflow-y: auto;
+}
+
+.formActions {
+  padding: 2rem 4.8rem 2.4rem 20.6rem;
+  width: 48.6rem;
+  display: flex;
+  gap: 1rem;
+  justify-content: flex-end;
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  background-color: var(--color-grey-100);
+}
+
+.formInputs {
+  padding-bottom: 8.4rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2.4rem;
+}
+
+/* when a file was added to the documentUploader */
+.formInputs:has(li) {
+  padding-bottom: 19rem;
+}
+
+.formTitle {
+  margin-bottom: 2.4rem;
+  color: var(--color-grey-900);
+}
+
+.label {
+  margin-bottom: 0.4rem;
+  margin-left: 0.2rem;
+  color: var(--color-grey-700);
+}
+
+.radioGroup {
+  display: flex;
+  flex-direction: column;
+  padding-top: 1rem;
+  gap: 1rem;
+}

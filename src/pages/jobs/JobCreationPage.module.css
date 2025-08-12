@@ -1,0 +1,156 @@
+.page {
+    display: flex;
+    position: relative;
+}
+
+.title {
+    grid-column: span 2;
+    color: var(--color-grey-700);
+}
+
+.leftSide .title {
+    margin-bottom: 4rem;
+}
+
+.leftSide {
+    padding: 4rem 6.4rem 4rem 4.8rem;
+    width: 50%;
+}
+
+.rightSide {
+    padding: 4rem 4.8rem 9.6rem 6.4rem;
+    width: 50%;
+    background-color: var(--color-white);
+    box-shadow: var(--shadow-8);
+    overflow-y: auto;
+}
+
+.rightSide,
+.leftSide {
+    height: calc(100vh -var(--header-height));
+}
+
+.btnExistingCustomer {
+    cursor: inherit;
+}
+
+.btnExistingCustomer:hover {
+    background-color: var(--color-blue-300);
+}
+
+.btnExistingCustomer,
+.btnAddNewCustomer {
+    padding: 0 1.6rem;
+    height: 2.5rem;
+    display: inline-flex;
+}
+
+.btnAddNewCustomer {
+    color: var(--color-grey-600);
+}
+
+.footer {
+    width: 100%;
+    height: 5.6rem;
+
+    display: flex;
+    align-items: center;
+
+    position: fixed;
+    bottom: 0;
+
+    background-color: var(--color-white);
+    box-shadow: var(--shadow-10);
+}
+
+.footerContainer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.inputHelper {
+    padding-left: 0.2rem;
+    color: var(--color-grey-600);
+}
+
+.datePickerWrap {
+    display: flex;
+    flex-direction: column;
+    row-gap: 0.4rem;
+}
+
+.actions {
+    margin-bottom: 4.8rem;
+}
+
+.clientName {
+    display: flex;
+    align-items: center;
+    column-gap: 0.6rem;
+    word-break: break-word;
+}
+
+.clientAddress {
+    display: flex;
+    align-items: center;
+    column-gap: 1.6rem;
+}
+
+.menuAddCustomer {
+    margin: 0 1.2rem;
+    padding: 1.2rem;
+    color: var(--color-blue-400);
+    text-align: center;
+    cursor: pointer;
+    border-top: 0.1rem solid var(--color-grey-100)
+}
+
+.menuOption {
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    background-color: transparent;
+    border-radius: 0.8rem;
+    transition: background-color 0.2s ease;
+}
+
+.grey100bg {
+    background-color: var(--color-grey-100);
+}
+
+.customerIcon {
+    margin-right: 0.6rem;
+    font-size: 1.6rem;
+    color: var(--color-grey-600);
+}
+
+.adressIcon {
+    margin-right: 1.6rem;
+    margin-left: 12.8rem;
+    font-size: 1.6rem;
+    color: var(--color-grey-600);
+}
+
+.addAddressBtn {
+    margin-left: 2.4rem;
+    column-gap: 0.4rem;
+    color: var(--color-grey-700);
+}
+
+.addAddressBtn i {
+    font-size: 1.1rem;
+}
+
+.addAddressBtn:hover {
+    color: var(--color-grey-900);
+}
+
+.clientOption {
+    color: var(--color-grey-600);
+}
+
+.addressOption {
+    color: var(--color-grey-700);
+}

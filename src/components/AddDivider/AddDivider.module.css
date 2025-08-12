@@ -1,0 +1,10 @@
+.customDivider:global(.rs-divider.rs-divider-horizontal) {
+  margin: 4rem 0;
+}
+
+.dropDownBtn {
+  &:hover {
+    background-color: transparent;
+    color: var(--color-grey-900)
+  }
+}

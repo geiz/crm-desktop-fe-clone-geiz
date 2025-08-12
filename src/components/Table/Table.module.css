@@ -1,0 +1,17 @@
+.pagination {
+    margin-top: 2.4rem;
+    margin-right: 4.8rem;
+    text-align: right;
+}
+
+.loadingTrigger {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 20px;
+}
+
+.inlineLoader {
+    padding: 8px 0;
+    opacity: 0.7;
+}

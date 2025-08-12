@@ -1,0 +1,62 @@
+.form {
+    padding: 3.2rem 4rem 4rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2.4rem;
+    width: 47.2rem;
+}
+
+.title {
+    color: var(--color-grey-700);
+}
+
+.subTitle {
+    color: var(--color-grey-600);
+}
+
+.inputs {
+    display: flex;
+    flex-direction: column;
+    gap: 3.2rem;
+}
+
+.radioGroup {
+    display: flex;
+    gap: 3.2rem;
+    align-items: center;
+}
+
+.inputsRow {
+    display: flex;
+    gap: 2rem;
+}
+
+.discountInput {
+    width: 9.6rem;
+}
+
+.discountInput input {
+    height: 3.6rem;
+    padding-left: 2.6rem;
+}
+
+.discountDescription input {
+    height: 3.6rem;
+}
+
+.currency {
+    color: var(--color-grey-600);
+    position: absolute;
+    left: 1.2rem;
+}
+
+.discountDescription {
+    flex: 1;
+}
+
+.actions {
+    display: flex;
+    justify-content: flex-end;
+    column-gap: 1.6rem;
+    padding-top: 0.8rem;
+}

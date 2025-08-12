@@ -1,0 +1,37 @@
+.eventCard {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+    overflow: hidden;
+}
+
+.title {
+    font-weight: 500;
+    font-size: 1rem;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.timeRange {
+    display: flex;
+    align-items: center;
+    font-size: 1rem;
+    opacity: 0.9;
+    width: 100%;
+}
+
+.timeText {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    flex: 1;
+}
+
+.icon {
+    margin-left: 0.25rem;
+    font-size: 0.875rem;
+    flex-shrink: 0;
+}

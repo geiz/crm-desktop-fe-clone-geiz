@@ -1,0 +1,48 @@
+.block {
+    padding: 0rem 3.2rem;
+    transition: padding 0.3s ease-in;
+
+}
+
+.block.open {
+    padding: 0rem 3.2rem 3.2rem;
+
+}
+
+.title {
+    color: var(--color-grey-800);
+}
+
+.dropDownIcon {
+    font-size: 1.6rem;
+    color: var(--color-grey-500);
+    transition:
+        transform 0.3s,
+        color 0.4s;
+}
+
+.dropDownIcon.open {
+    transform: rotate(180deg);
+}
+
+.dropDownWrapper {
+    margin-bottom: 0;
+    display: flex;
+    justify-content: space-between;
+    cursor: pointer;
+    padding: 2.4rem 0;
+}
+
+.wrapper {
+    display: grid;
+    grid-template-rows: 0fr;
+    transition: grid-template-rows 0.3s ease-out;
+}
+
+.wrapper.isOpen {
+    grid-template-rows: 1fr;
+}
+
+.hidden {
+    overflow: hidden;
+}

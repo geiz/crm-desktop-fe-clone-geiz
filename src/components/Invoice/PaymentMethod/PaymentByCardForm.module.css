@@ -1,0 +1,42 @@
+.paymentForm {
+  padding: 1.2rem 5.6rem 2.4rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 1.2rem;
+  background-color: var(--color-grey-100);
+}
+
+.formActions {
+  display: flex;
+  gap: 1rem;
+  justify-content: flex-end;
+  align-items: center;
+  margin-top: 3.2rem;
+}
+
+.formWrapper {
+  position: relative;
+  /* height: calc(100vh - 7.6rem - 4.3rem); */
+  height: calc(100vh - var(--header-height) - 4.3rem);
+  overflow: auto;
+  background-color: var(--color-grey-100);
+}
+
+.titleBlock {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  padding: 1rem 5.6rem;
+  border-bottom: 0.1rem solid var(--color-grey-300);
+}
+
+.formTitle {
+  color: var(--color-grey-900);
+  flex: 1
+}
+
+.formSubtitle {
+  padding: 1.2rem 5.6rem 0;
+  color: var(--color-grey-700);
+}

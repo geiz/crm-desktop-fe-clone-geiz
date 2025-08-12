@@ -1,0 +1,18 @@
+.label {
+    margin-bottom: 0.4rem;
+    display: flex;
+    align-items: center;
+    column-gap: 0.4rem;
+    color: var(--color-grey-900);
+}
+
+.tooltipIcon {
+    font-size: 1.6rem;
+    color: var(--color-grey-600);
+    transition: color 0.2s ease;
+}
+
+.tooltipIcon:hover {
+    font-size: 1.6rem;
+    color: var(--color-grey-900);
+}

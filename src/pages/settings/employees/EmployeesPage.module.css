@@ -1,0 +1,33 @@
+.table {
+  height: 40.1rem;
+  overflow-y: auto;
+}
+
+.container {
+  padding: 5.6rem 4.8rem;
+  display: flex;
+  flex-direction: column;
+  gap: 3.2rem;
+}
+
+.formTitle {
+  color: var(--color-grey-600);
+}
+
+.editPageHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.actionButtons {
+  display: flex;
+  gap: 1.6rem;
+  align-items: center;
+}
+
+.technicianSection {
+  margin-top: 3.2rem;
+  padding-top: 2.4rem;
+  border-top: 0.1rem solid var(--color-grey-200);
+}

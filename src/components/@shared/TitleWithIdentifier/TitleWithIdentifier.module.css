@@ -1,0 +1,8 @@
+.title {
+    color: var(--color-grey-700);
+}
+
+.identifier {
+    color: var(--color-grey-600);
+    padding: 0 0.8rem;
+}

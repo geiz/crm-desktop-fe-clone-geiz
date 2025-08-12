@@ -1,0 +1,17 @@
+.bigCalendarMenu {
+    display: flex;
+    height: calc(100vh - 20rem);
+    width: 100%;
+    flex-direction: column;
+    overflow-y: auto;
+    gap: 1.2rem;
+}
+
+.calendar {
+    border: none;
+    width: 16.75rem;
+}
+
+.checkbox {
+    font-size: 1.2rem;
+}

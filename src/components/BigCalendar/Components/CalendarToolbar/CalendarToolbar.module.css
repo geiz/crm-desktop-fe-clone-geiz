@@ -1,0 +1,66 @@
+.toolbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 0 1rem 3.5rem;
+    border-bottom: 1px solid var(--color-grey-200);
+}
+
+.dateLabel {
+    font-size: 1.5rem;
+    font-weight: 500;
+    color: var(--color-grey-400);
+    text-align: center;
+}
+
+.navButtons {
+    display: flex;
+    gap: 0.25rem;
+}
+
+.navButton {
+    background-color: var(--color-white);
+    border: 1px solid var(--color-grey-200);
+    border-radius: 4px;
+    padding: 0.25rem 0.75rem;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.navButton:hover {
+    background-color: var(--color-grey-100);
+}
+
+/* View buttons styling as tabs */
+.viewButtons {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.viewButton {
+    background-color: transparent;
+    border: none;
+    padding: 0.5rem 1rem;
+    font-size: 1.2rem;
+    cursor: pointer;
+    color: var(--color-grey-400);
+    transition: all 0.2s ease;
+    border-radius: 4px;
+}
+
+.viewButton:hover {
+    color: var(--color-grey-400);
+}
+
+.activeView {
+    background-color: var(--color-blue-300);
+    color: var(--color-white);
+    font-weight: 500;
+}
+
+/* Capitalize view names */
+.viewButton {
+    text-transform: capitalize;
+}

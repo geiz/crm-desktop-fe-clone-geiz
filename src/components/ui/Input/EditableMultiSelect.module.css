@@ -1,0 +1,244 @@
+.container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.label {
+    margin-bottom: 0.4rem;
+    color: var(--color-grey-900);
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+}
+
+.tooltipIcon {
+    color: var(--color-grey-600);
+    cursor: help;
+    transition: color 0.2s ease;
+}
+
+.tooltipIcon:hover {
+    color: var(--color-grey-900);
+}
+
+.selectContainer {
+    position: relative;
+    padding: 0;
+    height: auto;
+    min-height: 4.4rem;
+    width: 100%;
+    color: var(--color-grey-800);
+    border: 0.1rem solid var(--color-grey-200);
+    border-radius: 0.8rem;
+    background: var(--color-white);
+    transition: border-color 0.3s ease;
+    box-shadow: none;
+    cursor: pointer;
+}
+
+.selectContainer:focus-within {
+    border-color: var(--color-blue-300);
+    outline: 0.2rem solid var(--color-blue-200);
+}
+
+.selectContainer:hover:not(.disabled) {
+    border-color: var(--color-blue-300);
+}
+
+.selectContainer.error {
+    border-color: var(--color-red-300);
+}
+
+.selectContainer.error:focus-within {
+    border-color: var(--color-red-300);
+    outline: 0.2rem solid var(--color-red-100);
+}
+
+.selectContainer.disabled {
+    background: var(--color-grey-100);
+    cursor: not-allowed;
+    opacity: 0.6;
+}
+
+.chipsContainer {
+    padding: 0.9rem 1.2rem;
+    gap: 0.4rem;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    min-height: 4.4rem;
+    box-sizing: border-box;
+}
+
+.chip {
+    padding: 0.3rem 0.8rem;
+    margin: 0;
+    column-gap: 0.6rem;
+    background-color: var(--color-blue-100);
+    border: 0.1rem solid var(--color-grey-200);
+    border-radius: 0.4rem;
+    display: inline-flex;
+    align-items: center;
+    max-width: 20rem;
+}
+
+.chipText {
+    padding: 0;
+    padding-left: 0;
+    color: var(--color-grey-700);
+    cursor: pointer;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    transition: color 0.2s ease;
+}
+
+.chipText:hover {
+    color: var(--color-grey-900);
+}
+
+.editInput {
+    background: transparent;
+    border: none;
+    outline: none;
+    color: var(--color-grey-700);
+    min-width: 5rem;
+    max-width: 15rem;
+    padding: 0;
+}
+
+.removeButton {
+    padding: 0;
+    color: var(--color-grey-600);
+    cursor: pointer;
+    background: none;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 1.2rem;
+    height: 1.2rem;
+    font-size: 1rem;
+    border-radius: 0.2rem;
+}
+
+.removeButton:hover:not(:disabled) {
+    background-color: var(--color-blue-100);
+    color: var(--color-grey-600);
+}
+
+.removeButton:disabled {
+    cursor: not-allowed;
+    opacity: 0.5;
+}
+
+.inputWrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+    flex: 1;
+    min-width: 12rem;
+}
+
+.input {
+    padding: 0;
+    margin: 0;
+    border: none;
+    outline: none;
+    background: transparent;
+    color: var(--color-grey-800);
+    width: 100%;
+    min-width: 0;
+}
+
+.input::placeholder {
+    color: var(--color-grey-600);
+    opacity: 1;
+}
+
+.input:disabled {
+    cursor: not-allowed;
+    opacity: 0.6;
+}
+
+.loadingIcon {
+    position: absolute;
+    right: 0.8rem;
+    color: var(--color-grey-600);
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.dropdown {
+    padding: 0.2rem;
+    margin-top: 1.2rem;
+    border: 0.1rem solid var(--color-grey-200);
+    border-radius: 0.8rem;
+    overflow: hidden;
+    box-shadow: var(--shadow-8);
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    background-color: var(--color-white);
+    max-height: 20rem;
+    overflow-y: auto;
+    scrollbar-width: thin;
+    scrollbar-color: var(--color-grey-400) transparent;
+}
+
+.dropdownItem {
+    padding: 1.3rem 1.2rem;
+    color: var(--color-grey-600);
+    background-color: var(--color-white);
+    border-radius: 0.8rem;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+}
+
+.dropdownItem:hover {
+    color: var(--color-grey-800);
+    background-color: var(--color-grey-100);
+}
+
+.dropdownItem.createNew {
+    color: var(--color-blue-400);
+    font-weight: 500;
+}
+
+.dropdownItem.createNew:hover {
+    background-color: var(--color-blue-50);
+    color: var(--color-blue-500);
+}
+
+.errorMessage {
+    position: absolute;
+    bottom: -1.9rem;
+    min-height: 1.6rem;
+    color: var(--color-red-300);
+}
+
+.backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 999;
+    background: transparent;
+}

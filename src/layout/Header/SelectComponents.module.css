@@ -1,0 +1,47 @@
+.searchHeader {
+    padding: 1rem;
+    color: var(--color-grey-500);
+    position: sticky;
+    top: 0;
+    z-index: 1;
+    background-color: var(--color-white);
+}
+
+.menuListWrap {
+    max-height: 35rem;
+}
+
+.option {
+    padding: 0.9rem;
+    display: grid;
+    grid-template-columns: 6.4rem 20rem;
+    column-gap: 4.6rem;
+    cursor: pointer;
+    color: var(--color-grey-600);
+    background-color: transparent;
+    border-radius: 0.8rem;
+    transition: background-color 0.2s ease;
+}
+
+.bgGrey100 {
+    background-color: var(--color-grey-100);
+}
+
+.noMatches {
+    text-align: center;
+    color: var(--color-grey-600);
+}
+
+.searchIcon {
+    display: block;
+    margin: 0 auto 0.5rem;
+    font-size: 2.4rem;
+}
+
+.grey700 {
+    color: var(--color-grey-700);
+}
+
+.clientName {
+    word-break: break-word;
+}

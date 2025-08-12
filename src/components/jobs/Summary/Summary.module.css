@@ -1,0 +1,31 @@
+.block {
+  padding: 2.4rem 3.2rem 3.2rem;
+  grid-column: 1 / -1;
+  display: flex;
+  gap: 2.4rem;
+  flex-direction: column;
+}
+
+.text {
+  color: var(--color-grey-800);
+  white-space: break-spaces;
+}
+
+.title {
+  color: var(--color-grey-900);
+  text-transform: uppercase;
+}
+
+.editButton {
+  color: var(--color-grey-500);
+  font-size: 1.6rem;
+
+  &:hover {
+    color: var(--color-grey-700);
+  }
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+}

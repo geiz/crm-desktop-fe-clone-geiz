@@ -1,0 +1,91 @@
+.radioWrap {
+    line-height: 1.6rem;
+}
+
+.radio {
+    width: 0;
+    height: 0;
+
+    position: absolute;
+    z-index: -1;
+
+    opacity: 0;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.radioLabel {
+    display: flex;
+    align-items: center;
+    column-gap: 0.8rem;
+
+    position: relative;
+
+    color: var(--color-grey-800);
+
+    cursor: pointer;
+}
+
+.radioLabel::before {
+    content: '';
+
+    width: 1.6rem;
+    height: 1.6rem;
+
+    display: block;
+    flex-shrink: 0;
+
+    background-color: var(--color-white);
+    border-radius: 50%;
+    border: solid var(--color-grey-500);
+    border-width: 0.1rem;
+    transition: background-color 0.3s, border-color 0.3s;
+}
+
+.radio:focus + .radioLabel::before {
+    border-color: var(--color-blue-300);
+    outline: solid var(--color-blue-200);
+    outline-width: 0.1rem;
+}
+
+.radio:disabled + .radioLabel {
+    color: var(--color-grey-300);
+    cursor: not-allowed;
+    user-select: none;
+}
+
+.radio:disabled + .radioLabel::before {
+    background-color: var(--color-grey-100);
+    border-color: var(--color-grey-300);
+}
+
+.radio:checked + .radioLabel::after {
+    content: '';
+
+    width: 0.8rem;
+    height: 0.8rem;
+
+    position: absolute;
+    top: 50%;
+    left: 0.48rem;
+
+    background-color: var(--color-blue-300);
+    border-radius: 50%;
+    transform: translateY(-50%);
+}
+
+.radio:checked:disabled + .radioLabel::after {
+    background-color: var(--color-grey-300);
+}
+
+.radioLabel:hover::before {
+    border-color: var(--color-blue-400);
+}
+
+.radio:checked:hover + .radioLabel::before {
+    border-color: var(--color-blue-400);
+}
+
+.radio:checked:hover + .radioLabel::after {
+    background-color: var(--color-blue-400);
+}

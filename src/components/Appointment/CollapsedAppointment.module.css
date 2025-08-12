@@ -1,0 +1,31 @@
+.container {
+  border: 0.1rem solid var(--color-grey-300);
+  border-radius: 0.8rem;
+  padding: 1rem 1.2rem 1.2rem 2.4rem;
+  display: flex;
+  align-items: center;
+  gap: 2.4rem;
+}
+
+.statusContainer {
+  width: 12rem;
+}
+
+.inputsBlock {
+  flex-grow: 1;
+}
+
+.header {
+  position: relative;
+  display: flex;
+  align-items: center;
+  color: var(--color-grey-700);
+
+  padding-bottom: 1rem;
+  border-bottom: 0.1rem solid var(--color-grey-300);
+}
+
+.toggleDetailsBtn {
+  color: var(--color-blue-400);
+  padding: 0.75rem 0 0;
+}

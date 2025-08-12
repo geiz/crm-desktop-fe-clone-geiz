@@ -1,0 +1,19 @@
+.appointmentDetails {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 0.5rem;
+    padding: 1rem;
+}
+
+.label {
+    font-weight: bold;
+}
+
+.value {
+    color: #555;
+}
+
+.link {
+    color: #007bff;
+    text-decoration: none;
+}

@@ -1,0 +1,11 @@
+.wrap {
+  border-radius: 50%;
+  background-color: var(--color-green-200);
+  width: 1.6rem;
+  height: 1.6rem;
+}
+
+.checkIcon {
+  color: var(--color-white);
+  font-size: 1.6rem;
+}

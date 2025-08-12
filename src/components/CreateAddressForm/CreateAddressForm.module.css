@@ -1,0 +1,33 @@
+.form {
+    width: 68.6rem;
+    height: 62.8rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2.4rem;
+    padding: 3.2rem 4rem 4rem;
+}
+
+.form h3 {
+    color: var(--color-grey-900);
+}
+
+.addressWrap {
+    display: grid;
+    align-items: start;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 0 1.6rem;
+    grid-template-areas:
+        'selectAddress selectAddress'
+        'warning warning'
+        'streetAddress city'
+        'state country'
+        'zipCode apartment'
+        'buzzer resetBtn';
+}
+
+.formActions {
+    margin-top: auto;
+    display: flex;
+    column-gap: 1.6rem;
+    justify-content: flex-end;
+}

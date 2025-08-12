@@ -1,0 +1,54 @@
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background-color: var(--color-white);
+    padding: 2rem;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    max-width: 40rem;
+    width: 100%;
+}
+
+.checkmark {
+    width: 6.4rem;
+    height: 6.4rem;
+    border-radius: 50%;
+    background-color: var(--color-green-200);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 3.2rem;
+}
+
+.checkIcon {
+    color: var(--color-white);
+    font-size: 3.2rem;
+}
+
+.message {
+    margin-bottom: 4rem;
+}
+
+.title {
+    color: var(--color-grey-900);
+    margin-bottom: 1.2rem;
+    font-weight: 600;
+}
+
+.subtitle {
+    color: var(--color-grey-600);
+    margin: 0;
+    line-height: 1.5;
+}
+
+.button {
+    min-width: 16rem;
+    padding: 1.2rem 2.4rem;
+}

@@ -1,0 +1,46 @@
+.note {
+    padding-bottom: 1.6rem;
+    width: 100%;
+    border-bottom: 0.1rem solid var(--color-grey-100);
+}
+
+.header {
+    margin-bottom: 1.2rem;
+    display: flex;
+    align-items: center;
+    color: var(--color-grey-600);
+
+    button {
+        font-size: 1.6rem;
+    }
+}
+
+
+.createdAt {
+    margin-right: auto;
+}
+
+.iconBtn {
+    color: var(--color-grey-500);
+    padding: 0.3rem;
+    border-radius: 50%;
+    transition: background-color 0.2s, color 0.2s;
+}
+
+.iconBtn:hover {
+    background-color: var(--color-grey-100);
+}
+
+.trash {
+    margin-left: 1.5rem;
+
+    &:hover {
+        color: var(--color-red-300);
+    }
+}
+
+.text {
+    color: var(--color-grey-800);
+    word-wrap: break-word;
+    max-width: 23.2rem;
+}

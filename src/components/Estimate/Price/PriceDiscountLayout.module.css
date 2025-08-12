@@ -1,0 +1,53 @@
+.flexBlock {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 4.7rem;
+}
+
+.title {
+    color: var(--color-grey-700);
+}
+
+.price {
+    color: var(--color-grey-900);
+    min-width: 6.4rem;
+    text-align: end;
+}
+
+.btn {
+    margin-left: -1.6rem;
+}
+
+.discountActionsRow {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1.6rem;
+}
+
+.discountActions {
+    display: flex;
+    align-items: center;
+    gap: 1.6rem;
+}
+
+.discountTitle {
+    padding-right: 0.8rem;
+}
+
+.iconButton {
+    padding: 0;
+    font-size: 1.6rem;
+    color: var(--color-grey-700);
+}
+
+.discountValue {
+    color: var(--color-grey-600);
+}
+
+.discountDescription {
+    color: var(--color-grey-600);
+    margin-top: 1.6rem;
+}

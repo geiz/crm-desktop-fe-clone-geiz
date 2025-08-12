@@ -1,0 +1,38 @@
+.modal {
+    padding: 3.2rem 4rem 4rem;
+    width: 47.2rem;
+    overflow: initial;
+}
+
+.title {
+    margin-bottom: 2.4rem;
+    color: var(--color-grey-700);
+    text-transform: capitalize;
+}
+
+.fields {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.6rem;
+}
+
+.multipleFields .firstField {
+    width: 25.6rem;
+}
+
+.multipleFields .secondField {
+    width: 12rem;
+}
+
+.fields input[type='number']::-webkit-inner-spin-button,
+.fields input[type='number']::-webkit-outer-spin-button {
+    appearance: none;
+    -webkit-appearance: none;
+}
+
+.actions {
+    margin-top: 3.2rem;
+    display: flex;
+    justify-content: flex-end;
+    gap: 1.6rem;
+}

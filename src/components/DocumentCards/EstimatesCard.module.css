@@ -1,0 +1,29 @@
+.card {
+    padding: 3.2rem 23rem 4rem 4rem;
+}
+
+.title {
+    margin-bottom: 2.4rem;
+    color: var(--color-grey-700);
+}
+
+.count {
+    color: var(--color-grey-600);
+}
+
+.grid {
+    display: grid;
+    row-gap: 2.4rem;
+}
+
+.row {
+    display: grid;
+    grid-template-columns: 6.8rem 6.4rem 28rem 9.6rem;
+    column-gap: 4rem;
+    align-items: center;
+    color: var(--color-grey-900);
+}
+
+.row:first-child {
+    color: var(--color-grey-600);
+}

@@ -1,0 +1,37 @@
+.title {
+    margin-bottom: 4rem;
+    color: var(--color-grey-700);
+}
+
+.inputEmail {
+    margin-bottom: 3.6rem;
+}
+
+.passwordInput {
+    margin-bottom: 1.6rem;
+}
+
+.forgotLink {
+    margin-bottom: 2.4rem;
+    display: block;
+    color: var(--color-blue-300);
+    text-decoration: none;
+    text-align: right;
+}
+
+.btn {
+    width: 100%;
+}
+
+.companyLogo {
+    margin-bottom: 4rem;
+    width: 12rem;
+    height: 2.4rem;
+}
+
+
+.toast {
+    position: absolute;
+    bottom: 1.6rem;
+    left: 17.5rem;
+}

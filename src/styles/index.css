@@ -1,0 +1,143 @@
+@import url('./fonts.css');
+@import url('./icon_font.css');
+@import url('./variables.css');
+@import url('./typography.css');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: var(--color-grey-100);
+
+}
+
+html {
+    -webkit-text-size-adjust: 100%;
+    -moz-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+    font-size: 10px;
+    scroll-behavior: smooth;
+}
+
+html.no-scroll {
+    overflow: hidden;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+    transition: background-color 5000s ease-in-out 0s;
+}
+
+@media (min-width: 1441px) {
+    html {
+        font-size: 0.6945759vw;
+    }
+}
+
+@media (max-width: 1439px) {
+    html {
+        font-size: 0.6945759vw;
+    }
+}
+
+.os-scrollbar {
+    --os-size: 0.4rem;
+    --os-padding-perpendicular: 0;
+    --os-track-border-radius: 0.4rem;
+    --os-track-bg: var(--color-grey-200);
+    --os-track-bg: linear-gradient(90deg,
+            transparent 0%,
+            transparent 33%,
+            var(--color-grey-200) 33%,
+            var(--color-grey-200) 66%,
+            transparent 66%,
+            transparent 100%);
+    --os-handle-border-radius: 0.4rem;
+    --os-handle-bg: var(--color-grey-400);
+    --os-handle-perpendicular-size: 100%;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+.img-cover {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.img-contain {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.container {
+    width: 100%;
+    max-width: 144rem;
+    padding: 0 4.8rem;
+    margin: 0 auto;
+}
+
+a {
+    text-decoration: none;
+}
+
+.link-underline {
+    position: relative;
+    color: var(--color-blue-400);
+}
+
+.link-underline::after {
+    content: '';
+
+    width: 100%;
+    height: 0.1rem;
+
+    position: absolute;
+    left: 0;
+    bottom: -0.1rem;
+
+    background-color: currentColor;
+    transform: scaleX(0);
+    transition: transform 0.3s ease-in-out;
+}
+
+.link-underline:hover::after {
+    transform: scaleX(1);
+}
+
+.break-word {
+    word-break: break-word;
+}
+
+.pointer {
+    &:hover {
+        cursor: pointer;
+    }
+}
+
+textarea::-webkit-scrollbar {
+    width: var(--scrollbar-width);
+}
+
+textarea::-webkit-scrollbar-thumb {
+    background: var(--scrollbar-thumb-bg);
+    border-radius: var(--scrollbar-thumb-radius);
+}
+
+textarea::-webkit-scrollbar-track {
+    background: var(--scrollbar-track-bg);
+    box-shadow: var(--scrollbar-track-shadow);
+    border-radius: var(--scrollbar-track-radius);
+    border-left: var(--scrollbar-border-left);
+    border-right: var(--scrollbar-border-right);
+}

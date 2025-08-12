@@ -1,0 +1,37 @@
+.tabsContainer {
+    display: flex;
+    flex-direction: column;
+}
+
+.tabNavList {
+    margin: 0;
+    padding: 0;
+    width: fit-content;
+    display: flex;
+    list-style: none;
+}
+
+.tabNavItem {
+    padding: 0.4rem 1.6rem;
+    color: var(--color-grey-600);
+    background-color: transparent;
+    border-radius: 0.8rem;
+    transition:
+        background-color 0.4s ease-out,
+        color 0.4s ease-out;
+    cursor: pointer;
+}
+
+.tabNavItem:hover {
+    background-color: var(--color-grey-100);
+}
+
+.active {
+    color: var(--color-white);
+    background-color: var(--color-blue-300);
+}
+
+.active:hover {
+    background-color: var(--color-blue-300);
+    cursor: default;
+}

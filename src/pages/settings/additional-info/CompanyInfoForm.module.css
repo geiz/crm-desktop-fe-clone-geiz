@@ -1,0 +1,12 @@
+.form {
+    width: 58rem;
+    display: flex;
+    flex-direction: column;
+    gap: 4.8rem;
+}
+
+.formActions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 1rem;
+}

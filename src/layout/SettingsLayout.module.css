@@ -1,0 +1,13 @@
+.content {
+    padding-top: var(--header-height);
+    display: flex;
+}
+
+.contentInner {
+    width: 100%;
+    height: calc(100vh - var(--header-height));
+    min-height: fit-content;
+    background-color: var(--color-white);
+    overflow: hidden;
+    position: relative;
+}

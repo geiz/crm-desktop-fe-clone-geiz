@@ -1,0 +1,13 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    gap: 4.8rem;
+}
+
+.emailBtn {
+    margin-left: auto;
+}
+
+.customDivider:global(.rs-divider.rs-divider-horizontal) {
+    margin-top: -2.4rem;
+}

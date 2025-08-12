@@ -1,0 +1,141 @@
+.form {
+    width: 60.8rem;
+    display: flex;
+    flex-direction: column;
+    gap: 4.8rem
+}
+
+.inputsWrap {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2.4rem 1.6rem
+}
+
+.section {
+    display: flex;
+    flex-direction: column;
+    gap: 2.4rem;
+    grid-column: 1 / -1;
+    margin-top: 2.4rem;
+    padding-top: 2.4rem;
+}
+
+.sectionTitle {
+    color: var(--Gray-900, #363943);
+    font-family: Inter;
+    font-size: 1.2rem;
+    font-style: normal;
+    font-weight: 600;
+    margin: 0;
+    padding-bottom: 0.8rem;
+    border-bottom: 0.1rem solid var(--color-grey-200);
+}
+
+.areaGroup {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+}
+
+.primaryAreaContainer {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.6rem;
+}
+
+.areasRow {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.6rem;
+}
+
+.brandSection,
+.applianceSection {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.6rem;
+}
+
+.brandColumn,
+.applianceColumn {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+}
+
+/* Style for multi-select components to show tags properly */
+.section .brandSection :global(.react-select__multi-value),
+.section .applianceSection :global(.react-select__multi-value) {
+    background-color: #f0f8ff;
+    border: 0.1rem solid #b3d9ff;
+    border-radius: 2rem;
+    padding: 0.2rem 0.8rem;
+    font-size: 1.4rem;
+    color: #0066cc;
+    margin: 0.2rem;
+}
+
+.section .brandSection :global(.react-select__multi-value__label),
+.section .applianceSection :global(.react-select__multi-value__label) {
+    color: #0066cc;
+    font-size: 1.4rem;
+    padding: 0.4rem 0.6rem;
+}
+
+.section .brandSection :global(.react-select__multi-value__remove),
+.section .applianceSection :global(.react-select__multi-value__remove) {
+    background: none;
+    border: none;
+    color: #0066cc;
+    cursor: pointer;
+    padding: 0 0.4rem;
+    border-radius: 50%;
+    margin-left: 0.4rem;
+}
+
+.section .brandSection :global(.react-select__multi-value__remove:hover),
+.section .applianceSection :global(.react-select__multi-value__remove:hover) {
+    background-color: rgba(0, 102, 204, 0.1);
+}
+
+/* License section styles */
+.licenseWrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.orDivider {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    margin: 1rem 0;
+}
+
+.orDivider::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    height: 0.1rem;
+    background-color: var(--color-grey-300);
+}
+
+.orDivider span {
+    background-color: var(--color-white);
+    padding: 0 1.6rem;
+    color: var(--color-grey-600);
+    font-size: 1.4rem;
+    font-weight: 500;
+}
+
+.addCustomFieldBtn {
+    margin-top: 0.8rem;
+    width: 16.8rem;
+}
+
+.slackField {
+    grid-area: 2 / 1;
+}

@@ -1,0 +1,75 @@
+.menu {
+    padding: 0.2rem;
+    margin-top: 1.2rem;
+
+    min-width: 12.1rem;
+    max-width: fit-content;
+    display: flex;
+    flex-direction: column;
+
+    position: absolute;
+    right: 0;
+    top: 100%;
+    z-index: 40;
+
+    background-color: var(--color-white);
+    border: solid var(--color-grey-200);
+    border-width: 0.1rem;
+    border-radius: 0.8rem;
+    box-shadow: var(--shadow-6);
+}
+
+.option {
+    padding: 0.8rem 1.2rem;
+
+    width: 100%;
+
+    position: relative;
+
+    color: var(--color-grey-600);
+    text-align: left;
+
+    background: none;
+    border: none;
+    border-radius: 0.8rem;
+    cursor: pointer;
+}
+
+.option:hover,
+.option:focus {
+    color: var(--color-grey-800);
+    background-color: var(--color-grey-100);
+}
+
+.trigger {
+    width: max-content;
+}
+
+.menu-enter {
+    opacity: 0;
+}
+
+.menu-enter-active {
+    opacity: 1;
+    transition: opacity 200ms ease-in-out;
+}
+
+.menu-exit {
+    opacity: 1;
+}
+
+.menu-exit-active {
+    opacity: 0;
+    transition: opacity 200ms ease-in-out;
+}
+
+.btn {
+    color: var(--color-grey-600);
+    font-size: 2.4rem;
+    border-radius: 0.4rem;
+
+    &:hover {
+        color: var(--color-grey-700);
+        background-color: var(--color-grey-100);
+    }
+}

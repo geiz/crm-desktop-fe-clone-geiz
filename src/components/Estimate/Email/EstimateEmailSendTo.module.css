@@ -1,0 +1,52 @@
+.sendEmails {
+    width: 37.6rem;
+}
+
+.emails {
+    padding: 3.2rem 4rem 4rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2.4rem;
+}
+
+.emailsTitle {
+    color: var(--color-grey-700);
+}
+
+.emailsList {
+    display: flex;
+    flex-direction: column;
+    gap: 2.4rem;
+}
+
+.actions {
+    display: flex;
+    gap: 2.4rem;
+    justify-content: flex-end;
+    margin-top: 4rem;
+}
+
+.emailWithTrash {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.removeButton {
+    color: var(--color-grey-600);
+    font-size: 1.6rem;
+    flex-shrink: 0;
+}
+
+.removeButton:hover {
+    color: var(--color-red-300);
+}
+
+.divider {
+    border: none;
+    border-top: 0.1rem solid var(--color-grey-200);
+}
+
+.emailsList:not(:has(.divider))+.emailInput {
+    padding-top: 0.8rem;
+}

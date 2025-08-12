@@ -1,0 +1,22 @@
+.header {
+    padding: 4rem 4.8rem 0;
+    margin-bottom: 3.2rem;
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    justify-content: space-between;
+}
+
+.title {
+    margin-top: 1.6rem;
+    color: var(--color-grey-600);
+}
+
+.content {
+    margin-top: 2rem;
+    grid-row: 2/3;
+}
+
+.header input,
+.header select {
+    width: 29.6rem;
+}
