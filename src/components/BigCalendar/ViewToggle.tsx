@@ -21,8 +21,7 @@ export const ViewToggle: React.FC<ViewToggleProps> = ({ currentView, onViewChang
                 })}
                 onClick={() => onViewChange('schedule')}
             >
-                <i className="icon-list" />
-                <span>Schedule</span>
+                Schedule
             </button>
             <button
                 type="button"
@@ -31,8 +30,7 @@ export const ViewToggle: React.FC<ViewToggleProps> = ({ currentView, onViewChang
                 })}
                 onClick={() => onViewChange('calendar')}
             >
-                <i className="icon-calendar" />
-                <span>Calendar</span>
+                Calendar
             </button>
         </div>
     );

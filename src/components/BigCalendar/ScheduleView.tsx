@@ -14,7 +14,8 @@ import { APP_ROUTES } from 'constants/routes';
 import { useTooltip } from 'hooks/useTooltip';
 import useTimezone from 'hooks/useTimezone';
 import { parametrizeRouterURL } from 'routes/utils';
-import { useAppSelector } from 'store/store';
+import { useAppDispatch, useAppSelector } from 'store/store';
+import { setSelectedDate } from 'store/slices/calendarSlice';
 import { Event, AppointmentStatus } from 'types/appointmentTypes';
 import { getColorById } from 'utils/getColorById';
 
@@ -27,6 +28,7 @@ interface ScheduleViewProps {
 
 export const ScheduleView: React.FC<ScheduleViewProps> = ({ selectedDate, events }) => {
     const navigate = useNavigate();
+    const dispatch = useAppDispatch();
     const { technicians } = useAppSelector(state => state.calendar);
     const { shiftTimeFormatted, parseTimezoneLabel } = useTimezone();
     const { timezone } = useAppSelector(state => state.auth);
@@ -115,7 +117,7 @@ export const ScheduleView: React.FC<ScheduleViewProps> = ({ selectedDate, events
         const duration = endHour - startHour;
 
         // Position from 6 AM (changed from 7)
-        const topPosition = Math.max(0, startPosition * 45); // 20px per hour
+        const topPosition = Math.max(0, startPosition * 45); // 45px per hour
         const height = Math.max(18, duration * 45 - 2); // Minimum height of 18px
 
         return {
@@ -184,16 +186,14 @@ export const ScheduleView: React.FC<ScheduleViewProps> = ({ selectedDate, events
         if (!now.isSame(selectedDate, 'day')) return null;
 
         const currentHour = now.hour() + now.minute() / 60;
-        if (currentHour < 6 || currentHour > 21) return null; 
+        if (currentHour < 6 || currentHour > 30) return null; // 30 = next day 6 AM
 
         return (currentHour - 6) * 45;
     }, [selectedDate]);
 
     // Handle date navigation
     const handleDateChange = (date: Date) => {
-        // This would dispatch an action to update the selected date in Redux
-        // For now, we'll handle it in the parent component
-        window.location.href = `/schedule?date=${dayjs(date).format('YYYY-MM-DD')}`;
+        dispatch(setSelectedDate(date));
     };
 
     return (

@@ -10,7 +10,8 @@ import { ViewToggle, ViewMode } from 'components/BigCalendar/ViewToggle';
 import { Drawer } from 'components/Drawer/Drawer';
 
 import useTimezone from 'hooks/useTimezone';
-import { useAppSelector } from 'store/store';
+import { setSelectedDate } from 'store/slices/calendarSlice';
+import { useAppSelector, useAppDispatch } from 'store/store';
 import { getFilteredEvents } from 'utils/calendarUtils';
 
 import styles from './SchedulePage.module.css';
